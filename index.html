@@ -1109,6 +1109,10 @@ function renderNpcLocation(name){
 function wikiLink(name){
   return `<a class="wiki-link" href="https://zh.stardewvalleywiki.com/${encodeURIComponent(name)}" target="_blank">📖 查看 Wiki</a>`;
 }
+function festWikiLink(fest){
+  const url = fest.url || `https://zh.stardewvalleywiki.com/${encodeURIComponent(fest.name)}`;
+  return `<a class="wiki-link" href="${url}" target="_blank">📖 查看 Wiki</a>`;
+}
 function renderGiftEffect(isToday=false){
   const mul = isToday ? '×8' : '×1';
   const birthday = isToday ? '（今天是生日，效果翻8倍！）' : '';
@@ -1215,6 +1219,7 @@ function renderFestivalCard(fest,season,day){
         <div class="section-label" style="color:var(--gold-light)">🎁 獎勵與效果</div>
         <div class="festival-rewards">${rewards}</div>
         ${fest.tip?`<div class="festival-tip">${fest.tip}</div>`:''}
+        ${festWikiLink(fest)}
       </div>
     </div>
   </div>`;
@@ -1319,6 +1324,7 @@ function renderWeek(){
         <div class="festival-desc" style="padding:10px 12px;color:var(--parchment2);font-size:13px;line-height:1.7">${fest.desc}</div>
         <div style="padding:0 12px 10px;display:flex;flex-wrap:wrap;gap:6px">${fest.rewards.map(r=>`<span class="reward-tag">${r}</span>`).join('')}</div>
         ${fest.tip?`<div style="padding:0 12px 12px"><div class="festival-tip">${fest.tip}</div></div>`:''}
+        <div style="padding:0 12px 12px">${festWikiLink(fest)}</div>
       </div>`;
     }
     births.forEach(npc=>{
@@ -1464,6 +1470,7 @@ function toggleCalDetail(day){
       <div class="festival-desc" style="margin-bottom:8px">${fest.desc}</div>
       <div class="festival-rewards" style="margin-bottom:8px">${rewards}</div>
       ${fest.tip?`<div class="festival-tip">${fest.tip}</div>`:''}
+      ${festWikiLink(fest)}
     </div>`;
   }
   births.forEach(npc=>{
