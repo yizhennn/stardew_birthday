@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>星露谷 生日日報</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ── 星露谷像素風格 設計語言 ── */
+:root {
+  /* 泥土大地色盤 */
+  --parchment:   #f0e6c8;   /* 羊皮紙底色 */
+  --parchment2:  #e8d9a8;   /* 稍深的紙色 */
+  --wood:        #8b5e3c;   /* 木板棕 */
+  --wood-dark:   #5c3a1e;   /* 深木色（邊框） */
+  --wood-light:  #c8956a;   /* 亮木色 */
+  --soil:        #3d2b1f;   /* 泥土深色（主文字） */
+  --gold:        #d4a017;   /* 金幣金 */
+  --gold-light:  #f0c040;   /* 亮金 */
+  --green:       #4a7c59;   /* 葉綠（好感/喜歡） */
+  --green-light: #7cb87e;
+  --red:         #c0392b;   /* 紅心愛心色 */
+  --red-light:   #e74c3c;
+  --blue:        #2980b9;   /* 水色 */
+  --spring-c:    #7cb87e;
+  --summer-c:    #d4a017;
+  --fall-c:      #c0622b;
+  --winter-c:    #6aa3c8;
+
+  /* 像素字體 */
+  --font-pixel: 'Press Start 2P', monospace;
+  --font-body:  'Noto Sans TC', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  background-color: #2d1f0e;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(0,0,0,.15) 0px, rgba(0,0,0,.15) 2px, transparent 2px, transparent 32px),
+    repeating-linear-gradient(90deg, rgba(0,0,0,.1) 0px, rgba(0,0,0,.1) 2px, transparent 2px, transparent 32px);
+  min-height: 100vh;
+  color: var(--soil);
+}
+
+/* ─── 像素框 mixin ─── */
+/* 星露谷對話框特徵：深色外框 + 淺色內縮光邊 */
+.px-box {
+  background: var(--parchment);
+  border: 4px solid var(--wood-dark);
+  box-shadow:
+    inset 0 0 0 2px var(--parchment2),
+    inset 0 0 0 4px var(--wood-dark),
+    4px 4px 0 var(--wood-dark);
+  border-radius: 2px;
+}
+
+.px-box-dark {
+  background: #2a1a0e;
+  border: 4px solid var(--wood-dark);
+  box-shadow:
+    inset 0 0 0 2px #3d2510,
+    inset 0 0 0 4px var(--wood-dark),
+    4px 4px 0 #1a0e05;
+  border-radius: 2px;
+  color: var(--parchment);
+}
+
+/* ─── Header ─── */
+.header {
+  background: var(--wood-dark);
+  border-bottom: 4px solid #1a0e05;
+  padding: 14px 16px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  text-align: center;
+}
+
+.header h1 {
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  color: var(--gold-light);
+  letter-spacing: 1px;
+  line-height: 1.8;
+  text-shadow: 2px 2px 0 var(--wood-dark), -1px -1px 0 #1a0e05;
+}
+
+.header-sub {
+  font-size: 11px;
+  color: var(--wood-light);
+  margin-top: 2px;
+  font-family: var(--font-body);
+}
+
+/* ─── Input Section ─── */
+.input-section {
+  padding: 12px;
+  background: var(--wood);
+  border-bottom: 4px solid var(--wood-dark);
+}
+
+.season-tabs {
+  display: flex;
+  gap: 4px;
+  max-width: 480px;
+  margin: 0 auto 10px;
+}
+
+.season-tab {
+  flex: 1;
+  padding: 8px 4px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 3px solid var(--wood-dark);
+  background: var(--parchment2);
+  color: var(--soil);
+  box-shadow: 3px 3px 0 var(--wood-dark);
+  transition: all .1s;
+  border-radius: 1px;
+}
+.season-tab:active { transform: translate(2px,2px); box-shadow: 1px 1px 0 var(--wood-dark); }
+.season-tab.spring.active { background: #b8e0b0; border-color: #2d5a30; box-shadow: 3px 3px 0 #1a3520; color: #1a3520; }
+.season-tab.summer.active { background: #f5d060; border-color: #7a5010; box-shadow: 3px 3px 0 #4a3010; color: #4a3010; }
+.season-tab.fall.active   { background: #e09050; border-color: #6a2a10; box-shadow: 3px 3px 0 #3a1508; color: #3a1508; }
+.season-tab.winter.active { background: #a0c8e8; border-color: #1a4a6a; box-shadow: 3px 3px 0 #0a2a3a; color: #0a2a3a; }
+
+.input-row {
+  display: flex;
+  gap: 8px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.day-input {
+  flex: 1;
+  padding: 10px 12px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  background: var(--parchment);
+  border: 3px solid var(--wood-dark);
+  box-shadow: inset 2px 2px 0 rgba(0,0,0,.2);
+  color: var(--soil);
+  outline: none;
+  border-radius: 1px;
+}
+.day-input:focus { border-color: var(--gold); }
+
+.search-btn {
+  padding: 10px 16px;
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  background: var(--gold);
+  color: var(--wood-dark);
+  border: 3px solid var(--wood-dark);
+  box-shadow: 3px 3px 0 var(--wood-dark);
+  cursor: pointer;
+  border-radius: 1px;
+  transition: all .1s;
+  white-space: nowrap;
+  line-height: 1.6;
+}
+.search-btn:active { transform: translate(2px,2px); box-shadow: 1px 1px 0 var(--wood-dark); }
+
+/* ─── View Tabs ─── */
+.view-tabs {
+  display: flex;
+  background: var(--wood-dark);
+  border-bottom: 3px solid #1a0e05;
+  gap: 0;
+}
+
+.view-tab {
+  flex: 1;
+  padding: 10px 6px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  background: transparent;
+  border: none;
+  color: var(--wood-light);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all .15s;
+}
+.view-tab.active {
+  color: var(--gold-light);
+  border-bottom-color: var(--gold-light);
+  background: rgba(212,160,23,.1);
+}
+
+/* ─── Content ─── */
+.content {
+  padding: 12px;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ─── Birthday Card (遊戲對話框風格) ─── */
+.birthday-card {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.card-nameplate {
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  color: var(--gold-light);
+  background: var(--wood-dark);
+  display: inline-block;
+  padding: 4px 10px;
+  margin-bottom: -2px;
+  position: relative;
+  z-index: 1;
+  border: 2px solid #1a0e05;
+  letter-spacing: 1px;
+}
+
+.card-body {
+  background: var(--parchment);
+  border: 4px solid var(--wood-dark);
+  box-shadow:
+    inset 0 0 0 2px var(--parchment2),
+    inset 0 0 0 4px var(--wood-dark),
+    4px 4px 0 var(--wood-dark);
+  padding: 14px;
+}
+
+.card-header-row {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.npc-avatar {
+  width: 72px; height: 72px;
+  image-rendering: pixelated;
+  border: 3px solid var(--wood-dark);
+  box-shadow: 2px 2px 0 var(--wood-dark);
+  background: var(--parchment2);
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.npc-avatar-placeholder {
+  width: 72px; height: 72px;
+  border: 3px solid var(--wood-dark);
+  background: var(--parchment2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 32px; flex-shrink: 0;
+}
+
+.npc-info { flex: 1; }
+.npc-name {
+  font-family: var(--font-pixel);
+  font-size: 9px;
+  color: var(--wood-dark);
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+.npc-date {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--wood-dark);
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.day-hero {
+  font-family: var(--font-pixel);
+  font-size: 44px;
+  color: var(--gold-light);
+  line-height: 1;
+  text-shadow: 3px 3px 0 var(--wood-dark), -1px -1px 0 var(--wood-dark);
+  min-width: 58px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.today-card .day-hero {
+  font-size: 64px;
+  min-width: 74px;
+  color: var(--red);
+  text-shadow: 3px 3px 0 var(--wood-dark), -1px -1px 0 var(--wood-dark);
+}
+/* Today card overrides */
+.today-card { cursor: pointer; }
+.today-card .npc-avatar { width: 100px; height: 100px; }
+.today-card .npc-avatar-placeholder { width: 100px; height: 100px; font-size: 52px; }
+.today-card .npc-name { font-size: 14px; }
+.today-card .npc-date { font-size: 20px; }
+.today-card .card-nameplate { font-size: 10px; padding: 6px 14px; }
+.today-card .gift-img,
+.today-card .gift-img-placeholder { width: 56px; height: 56px; font-size: 26px; }
+.today-card .gift-name { font-size: 11px; }
+.today-card .gift-item { width: 68px; }
+.today-card .tier-label { font-size: 13px; }
+.today-card .section-label { font-size: 9px; }
+.today-card .heart-event-desc { font-size: 14px; }
+.today-card .heart-badge { font-size: 8px; }
+.today-card .heart-event-reward { font-size: 13px; }
+
+.birthday-badge {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  font-family: var(--font-pixel);
+  font-size: 6px;
+  padding: 3px 6px;
+  border: 2px solid var(--wood-dark);
+  box-shadow: 2px 2px 0 var(--wood-dark);
+  line-height: 1.6;
+}
+
+/* 分隔線：像素虛線 */
+.px-divider {
+  height: 3px;
+  background: repeating-linear-gradient(90deg, var(--wood) 0px, var(--wood) 6px, transparent 6px, transparent 10px);
+  margin: 10px 0;
+  opacity: .5;
+}
+
+/* Section 標題 */
+.section-label {
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  color: var(--wood);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, var(--wood-light) 0, var(--wood-light) 4px, transparent 4px, transparent 8px);
+  opacity: .5;
+}
+
+/* 禮物格子 */
+.gift-tier { margin-bottom: 10px; }
+.tier-label {
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.tier-love { color: var(--red); }
+.tier-like { color: var(--green); }
+
+.gift-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.gift-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  width: 56px;
+}
+
+.gift-img {
+  width: 44px; height: 44px;
+  image-rendering: pixelated;
+  border: 2px solid var(--wood-dark);
+  box-shadow: 2px 2px 0 var(--wood-dark);
+  background: var(--parchment2);
+  padding: 3px;
+  object-fit: contain;
+}
+.gift-img-placeholder {
+  width: 44px; height: 44px;
+  border: 2px solid var(--wood-dark);
+  background: var(--parchment2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+}
+.gift-item.love .gift-img,
+.gift-item.love .gift-img-placeholder { border-color: var(--red); background: #fde8e8; }
+.gift-item.like .gift-img,
+.gift-item.like .gift-img-placeholder { border-color: var(--green); background: #e8f5e8; }
+.gift-item.dislike .gift-img,
+.gift-item.dislike .gift-img-placeholder { border-color: #8b6914; background: #f5ede0; }
+.gift-item.hate .gift-img,
+.gift-item.hate .gift-img-placeholder { border-color: #5c1a1a; background: #f5e0e0; }
+.tier-dislike { color: #8b5e10; }
+.tier-hate { color: var(--red); }
+
+.gift-name {
+  font-size: 9px;
+  color: var(--soil);
+  text-align: center;
+  line-height: 1.3;
+  word-break: break-all;
+}
+
+/* 好感度里程碑 */
+.heart-events { margin-top: 2px; }
+.heart-event-item {
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--parchment2);
+  border: 2px solid var(--wood);
+  box-shadow: 2px 2px 0 var(--wood);
+  margin-bottom: 6px;
+  align-items: flex-start;
+}
+.heart-badge {
+  font-family: var(--font-pixel);
+  font-size: 6px;
+  background: var(--red);
+  color: #fff;
+  padding: 3px 5px;
+  border: 2px solid var(--wood-dark);
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1.6;
+}
+.heart-event-desc {
+  font-size: 12px;
+  color: var(--soil);
+  line-height: 1.5;
+  flex: 1;
+}
+.heart-event-reward {
+  font-size: 11px;
+  color: var(--green);
+  font-weight: 700;
+  margin-top: 3px;
+}
+
+/* 出沒地點 */
+.loc-list { display: flex; flex-direction: column; gap: 5px; margin: 6px 0 10px; }
+.loc-tag {
+  background: rgba(0,0,0,.07);
+  border-left: 3px solid var(--wood);
+  padding: 5px 10px;
+  font-size: 12px;
+  color: var(--soil);
+  line-height: 1.5;
+}
+
+/* Wiki 連結 */
+.wiki-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: var(--blue);
+  text-decoration: none;
+  margin-top: 8px;
+  border-bottom: 1px dotted var(--blue);
+}
+
+/* ─── Festival Card ─── */
+.festival-card {
+  margin-bottom: 16px;
+}
+.festival-card .card-nameplate {
+  color: var(--gold-light);
+}
+.festival-body {
+  background: #3d2b10;
+  border: 4px solid var(--wood-dark);
+  box-shadow:
+    inset 0 0 0 2px #5c3a1e,
+    inset 0 0 0 4px var(--wood-dark),
+    4px 4px 0 #1a0e05;
+  color: var(--parchment);
+  overflow: hidden;
+}
+/* Festival screenshot banner */
+.festival-banner {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  image-rendering: pixelated;
+  border-bottom: 3px solid var(--wood-dark);
+  background: #2a1a0e;
+}
+.festival-banner-placeholder {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 52px;
+  background: linear-gradient(135deg, #3d2b10, #1a0e05);
+  border-bottom: 3px solid var(--wood-dark);
+}
+.festival-body-inner { padding: 14px; }
+.festival-header-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.festival-icon { font-size: 36px; flex-shrink: 0; }
+.festival-name {
+  font-family: var(--font-pixel);
+  font-size: 9px;
+  color: var(--gold-light);
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+.festival-date { font-size: 15px; font-weight: 700; color: var(--gold-light); margin-top: 3px; }
+.festival-desc {
+  font-size: 12px;
+  color: var(--parchment2);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+.festival-rewards { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.reward-tag {
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  background: rgba(212,160,23,.2);
+  border: 2px solid var(--gold);
+  color: var(--gold-light);
+  box-shadow: 2px 2px 0 rgba(0,0,0,.3);
+}
+.festival-tip {
+  font-size: 11px;
+  color: #a8e0a0;
+  background: rgba(74,124,89,.2);
+  border: 2px solid var(--green);
+  padding: 7px 10px;
+  line-height: 1.6;
+}
+
+/* Season badge */
+.si {
+  display: inline-block;
+  font-family: var(--font-pixel);
+  font-size: 6px;
+  padding: 2px 6px;
+  border: 2px solid;
+  line-height: 1.6;
+}
+.si-春天 { background: #c8f0c0; border-color: #2d5a30; color: #1a3520; }
+.si-夏天 { background: #f8e880; border-color: #7a5010; color: #4a3010; }
+.si-秋天 { background: #f0b060; border-color: #6a2a10; color: #3a1508; }
+.si-冬天 { background: #b0d8f0; border-color: #1a4a6a; color: #0a2a3a; }
+
+/* ─── Week / Month Mini Cards ─── */
+.date-group-header {
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  color: var(--gold-light);
+  background: var(--wood-dark);
+  padding: 6px 10px;
+  margin: 14px 0 6px;
+  border: 2px solid #1a0e05;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mini-card {
+  background: var(--parchment);
+  border: 3px solid var(--wood-dark);
+  box-shadow: 3px 3px 0 var(--wood-dark);
+  padding: 10px 12px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all .1s;
+}
+.mini-card:active { transform: translate(1px,1px); box-shadow: 2px 2px 0 var(--wood-dark); }
+
+.mini-avatar-img {
+  width: 40px; height: 40px;
+  image-rendering: pixelated;
+  border: 2px solid var(--wood-dark);
+  background: var(--parchment2);
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.mini-avatar-ph {
+  width: 40px; height: 40px;
+  border: 2px solid var(--wood-dark);
+  background: var(--parchment2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; flex-shrink: 0;
+}
+.mini-info { flex: 1; min-width: 0; }
+.mini-name { font-size: 14px; font-weight: 700; color: var(--soil); }
+.mini-sub { font-size: 11px; color: var(--wood); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mini-festival-card { background: #3d2b10; }
+.mini-festival-card .mini-name { color: var(--gold-light); }
+.mini-festival-card .mini-sub { color: var(--wood-light); }
+.mini-day {
+  font-family: var(--font-pixel);
+  font-size: 9px;
+  color: var(--gold);
+  white-space: nowrap;
+  line-height: 1.6;
+}
+
+/* ─── Empty State ─── */
+.empty {
+  text-align: center;
+  padding: 48px 20px;
+}
+.empty-box {
+  display: inline-block;
+  background: var(--parchment);
+  border: 4px solid var(--wood-dark);
+  box-shadow: 4px 4px 0 var(--wood-dark);
+  padding: 24px 32px;
+}
+.empty .emoji { font-size: 40px; margin-bottom: 10px; }
+.empty p { font-size: 13px; color: var(--wood); line-height: 1.7; }
+
+/* ─── Page title ─── */
+.page-title {
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  color: var(--gold-light);
+  background: var(--wood-dark);
+  padding: 8px 12px;
+  border: 2px solid #1a0e05;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+/* ─── Gift Effect Table ─── */
+.gift-effect-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 8px;
+  font-size: 11px;
+}
+.gef-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+  border: 2px solid var(--wood);
+  margin-bottom: 2px;
+}
+.gef-row.header {
+  background: var(--wood-dark);
+  font-family: var(--font-pixel);
+  font-size: 6px;
+  color: var(--gold-light);
+}
+.gef-row.love { background: rgba(192,57,43,.12); }
+.gef-row.like { background: rgba(74,124,89,.12); }
+.gef-row.neutral { background: rgba(0,0,0,.05); }
+.gef-row.bad, .gef-row.hate { background: rgba(80,40,20,.1); }
+.gef-col {
+  padding: 5px 4px;
+  border-right: 1px solid rgba(0,0,0,.1);
+  text-align: center;
+  color: var(--soil);
+  line-height: 1.4;
+}
+.gef-row.header .gef-col { color: var(--gold-light); }
+.gef-row.love .gef-col { color: var(--red); font-weight: 700; }
+.gef-row.like .gef-col { color: var(--green); font-weight: 700; }
+.gef-col:first-child { text-align: left; padding-left: 6px; }
+.gef-span4 { grid-column: 2 / 6; text-align: left; padding-left: 10px; }
+.gift-effect-tip {
+  font-size: 11px;
+  color: var(--green);
+  background: rgba(74,124,89,.1);
+  border: 2px solid var(--green);
+  padding: 6px 8px;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+/* ─── Week Detail ─── */
+.week-detail-wrap {
+  background: #3d2b10;
+  border: 3px solid var(--wood-dark);
+  border-top: none;
+  box-shadow: 3px 3px 0 #1a0e05;
+  color: var(--parchment);
+  margin-bottom: 6px;
+}
+.week-detail-wrap .section-label { color: var(--wood-light); }
+.week-detail-wrap .gift-name { color: var(--parchment2); }
+.week-detail-wrap .tier-label { color: var(--parchment); }
+.week-detail-wrap .tier-love { color: #ff8fa3; }
+.week-detail-wrap .tier-like { color: var(--gold-light); }
+.week-detail-wrap .gef-row.header { background: rgba(0,0,0,.4); }
+.week-detail-wrap .gef-col { color: var(--parchment2); }
+.week-detail-wrap .gef-row.love .gef-col { color: #ff8fa3; }
+.week-detail-wrap .gef-row.like .gef-col { color: var(--green-light); }
+.week-detail-wrap .heart-event-item { background: rgba(255,255,255,.05); border-color: var(--wood); }
+.week-detail-wrap .heart-event-desc { color: var(--parchment2); }
+.week-detail-wrap .heart-event-reward { color: var(--green-light); }
+.week-detail-wrap .px-divider { opacity: .3; }
+.week-detail-wrap .gift-effect-tip { color: var(--green-light); border-color: var(--green); }
+.week-detail-wrap .loc-tag { color: var(--parchment2); background: rgba(255,255,255,.07); border-left-color: var(--wood-light); }
+.week-detail-wrap .wiki-link { color: var(--gold-light); border-bottom-color: var(--gold-light); }
+.mini-today-card { border-color: var(--red) !important; box-shadow: 3px 3px 0 var(--red) !important; }
+
+/* ─── Calendar ─── */
+.cal-legend {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  background: rgba(0,0,0,.15);
+  border: 2px solid var(--wood);
+}
+.cal-leg-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--wood-light); }
+.cal-leg-dot { width: 10px; height: 10px; border: 2px solid var(--wood-dark); flex-shrink: 0; }
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  margin-bottom: 10px;
+}
+.cal-dow {
+  text-align: center;
+  font-family: var(--font-pixel);
+  font-size: 6px;
+  color: var(--wood-light);
+  padding: 6px 2px;
+  background: var(--wood-dark);
+  border: 2px solid #1a0e05;
+}
+.cal-cell {
+  background: var(--parchment);
+  border: 2px solid var(--wood);
+  min-height: 52px;
+  padding: 4px;
+  cursor: pointer;
+  transition: all .1s;
+  position: relative;
+  overflow: hidden;
+}
+.cal-cell:active { transform: scale(.97); }
+.cal-cell.cal-has-event { border-color: var(--wood-dark); }
+.cal-cell.cal-today {
+  background: #e8f5e0;
+  border: 2px solid var(--green);
+  box-shadow: 0 0 0 2px var(--green-light);
+}
+.cal-cell.cal-selected {
+  background: #fff8e0;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px var(--gold-light);
+}
+.cal-daynum {
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  color: var(--soil);
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  line-height: 1.6;
+}
+.cal-today .cal-daynum { color: var(--green); }
+.cal-dot {
+  width: 6px; height: 6px;
+  border-radius: 0;
+  border: 1px solid var(--wood-dark);
+  display: inline-block;
+  flex-shrink: 0;
+}
+.cal-dot.birth { background: var(--red); }
+.cal-dot.fest  { background: var(--gold); }
+
+.cal-preview-fest {
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 1px;
+}
+.cal-preview-npc {
+  font-size: 9px;
+  color: var(--soil);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* 細節展開區 */
+.cal-detail-wrap {
+  background: #3d2b10;
+  border: 4px solid var(--wood-dark);
+  box-shadow:
+    inset 0 0 0 2px #5c3a1e,
+    inset 0 0 0 4px var(--wood-dark),
+    4px 4px 0 #1a0e05;
+  color: var(--parchment);
+  margin-bottom: 12px;
+  padding-bottom: 14px;
+}
+.cal-detail-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 3px solid var(--wood-dark);
+  background: #2a1a0e;
+  gap: 4px;
+}
+.cal-close-btn {
+  margin-left: auto;
+  background: var(--red);
+  color: #fff;
+  border: 2px solid var(--wood-dark);
+  width: 26px; height: 26px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  box-shadow: 2px 2px 0 var(--wood-dark);
+  flex-shrink: 0;
+}
+.cal-detail-wrap .festival-desc { color: var(--parchment2); }
+.cal-detail-wrap .festival-name { color: var(--gold-light); }
+.cal-detail-wrap .npc-name { color: var(--gold-light); }
+.cal-detail-wrap .section-label { color: var(--wood-light); }
+.cal-detail-wrap .px-divider { opacity: .3; }
+.cal-detail-wrap .heart-event-item { background: rgba(255,255,255,.05); border-color: var(--wood); }
+.cal-detail-wrap .heart-event-desc { color: var(--parchment2); }
+.cal-detail-wrap .heart-event-reward { color: var(--green-light); }
+.cal-detail-wrap .loc-tag { color: var(--parchment2); background: rgba(255,255,255,.07); border-left-color: var(--wood-light); }
+.cal-detail-wrap .wiki-link { color: var(--gold-light); border-bottom-color: var(--gold-light); }
+
+/* ─── Search ─── */
+.search-box-wrap { margin-bottom: 14px; }
+.search-type-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.search-type-btn {
+  flex: 1;
+  padding: 8px 6px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 3px solid var(--wood-dark);
+  background: var(--parchment2);
+  color: var(--soil);
+  box-shadow: 3px 3px 0 var(--wood-dark);
+  border-radius: 1px;
+  transition: all .1s;
+}
+.search-type-btn:active { transform: translate(2px,2px); box-shadow: 1px 1px 0 var(--wood-dark); }
+.search-type-btn.active {
+  background: var(--gold);
+  color: var(--wood-dark);
+  border-color: var(--wood-dark);
+}
+.search-input-row { margin: 0 0 6px; }
+.search-hint {
+  font-size: 11px;
+  color: var(--wood-light);
+  background: rgba(0,0,0,.2);
+  border: 2px solid var(--wood);
+  padding: 6px 10px;
+  line-height: 1.6;
+}
+.search-no-result {
+  text-align: center;
+  padding: 32px 20px;
+}
+.search-no-result .empty-box {
+  display: inline-block;
+  background: var(--parchment);
+  border: 4px solid var(--wood-dark);
+  box-shadow: 4px 4px 0 var(--wood-dark);
+  padding: 20px 28px;
+}
+.search-no-result p { font-size: 13px; color: var(--wood); line-height: 1.7; margin-top: 8px; }
+
+.today-empty {
+  text-align: center;
+  font-size: 28px;
+  color: var(--wood);
+  padding: 20px 0 8px;
+}
+.today-no-event {
+  border: 4px solid var(--wood-dark);
+  box-shadow: 4px 4px 0 var(--wood-dark);
+  background: var(--parchment2);
+  padding: 24px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.today-no-event-day {
+  font-family: var(--font-pixel);
+  font-size: 64px;
+  color: var(--wood-light);
+  line-height: 1;
+  text-shadow: 3px 3px 0 var(--wood-dark);
+}
+.today-no-event-msg {
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  color: var(--wood);
+  text-align: center;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--wood-dark); }
+::-webkit-scrollbar-thumb { background: var(--wood); border: 1px solid var(--wood-dark); }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>🌾 STARDEW VALLEY 生日日報 🌾</h1>
+  <div class="header-sub">鵜鶘鎮行事曆</div>
+</div>
+
+<!-- Input -->
+<div class="input-section">
+  <div class="season-tabs">
+    <button class="season-tab spring active" onclick="selectSeason('春天')">🌸 春天</button>
+    <button class="season-tab summer" onclick="selectSeason('夏天')">☀️ 夏天</button>
+    <button class="season-tab fall" onclick="selectSeason('秋天')">🍂 秋天</button>
+    <button class="season-tab winter" onclick="selectSeason('冬天')">❄️ 冬天</button>
+  </div>
+  <div class="input-row">
+    <input class="day-input" type="number" id="dayInput" placeholder="日期 1 – 28" min="1" max="28" value="1">
+    <button class="search-btn" onclick="search()">查詢</button>
+  </div>
+</div>
+
+<!-- Tabs -->
+<div class="view-tabs">
+  <button class="view-tab active" onclick="switchTab(this,'today')">📅 今天</button>
+  <button class="view-tab" onclick="switchTab(this,'week')">🗓 本週</button>
+  <button class="view-tab" onclick="switchTab(this,'month')">📆 本季</button>
+  <button class="view-tab" onclick="switchTab(this,'npc')">👥 村民</button>
+  <button class="view-tab" onclick="switchTab(this,'search')">🔍 搜尋</button>
+</div>
+
+<div class="content">
+  <div id="today" class="tab-panel active"></div>
+  <div id="week" class="tab-panel"></div>
+  <div id="month" class="tab-panel"></div>
+  <div id="npc" class="tab-panel"></div>
+  <div id="search" class="tab-panel">
+    <div class="search-box-wrap">
+      <div class="page-title">🔍 搜尋</div>
+      <div class="search-type-row">
+        <button class="search-type-btn active" id="stype-npc" onclick="setSearchType('npc')">👥 村民</button>
+        <button class="search-type-btn" id="stype-festival" onclick="setSearchType('festival')">🎉 節日活動</button>
+      </div>
+      <div class="search-input-row">
+        <input class="day-input" type="text" id="npcSearchInput" placeholder="輸入關鍵字…" oninput="doSearch()">
+      </div>
+      <div class="search-hint" id="searchHint">支援中文名或英文名，例如：阿比蓋爾、Abigail、謝恩、Shane</div>
+    </div>
+    <div id="searchResults"></div>
+  </div>
+</div>
+
+<script>
+const IMG = {
+  char:  n => `stardew/characters/${n}.png`,
+  item:  n => `stardew/items/${n}.png`,
+  event: n => `stardew/events/${n}.png`
+};
+
+let DATA = null;
+
+let currentSeason='春天', currentDay=1;
+
+function selectSeason(s){
+  currentSeason=s;
+  document.querySelectorAll('.season-tab').forEach(t=>t.classList.remove('active'));
+  const m={'春天':'spring','夏天':'summer','秋天':'fall','冬天':'winter'};
+  document.querySelector(`.season-tab.${m[s]}`).classList.add('active');
+}
+
+function switchTab(btn,id){
+  document.querySelectorAll('.view-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(id).classList.add('active');
+  if(id==='npc') renderNpc();
+  if(id==='search') setTimeout(()=>document.getElementById('npcSearchInput').focus(), 100);
+}
+
+function search(){
+  const day=parseInt(document.getElementById('dayInput').value);
+  if(!day||day<1||day>28){alert('請輸入 1–28 的日期！');return;}
+  currentDay=day;
+  renderToday();renderWeek();renderMonth();
+}
+
+function charImg(en,big=true){
+  const sz=big?72:40, cls=big?'npc-avatar':'mini-avatar-img', ph=big?'npc-avatar-placeholder':'mini-avatar-ph', emoji='👤';
+  return `<img class="${cls}" src="${IMG.char(en)}" alt="" style="cursor:pointer" onclick="openNpcModal('${en}')" onerror="this.style.display='none';this.nextSibling.style.display='flex'"><div class="${ph}" style="display:none;cursor:pointer" onclick="openNpcModal('${en}')">${emoji}</div>`;
+}
+
+function giftItem(zh,en,tier){
+  return `<div class="gift-item ${tier}"><img class="gift-img" src="${IMG.item(en)}" alt="${zh}" onerror="this.style.display='none';this.nextSibling.style.display='flex'"><div class="gift-img-placeholder" style="display:none">🎁</div><div class="gift-name">${zh}</div></div>`;
+}
+
+function renderHeartEvents(name){
+  const events=DATA.heartMilestones[name];
+  if(!events||!events.length) return '';
+  let html=`<div class="px-divider"></div><div class="section-label">💝 好感度里程碑</div><div class="heart-events">`;
+  events.forEach(e=>{
+    html+=`<div class="heart-event-item"><div class="heart-badge">❤️ ${e.heart}心</div><div class="heart-event-desc">${e.event}${e.reward?`<div class="heart-event-reward">🎁 ${e.reward}</div>`:''}</div></div>`;
+  });
+  return html+`</div>`;
+}
+
+function renderNpcLocation(name){
+  const locs=DATA.locations[name];
+  if(!locs||!locs.length) return '';
+  return `<div class="px-divider"></div><div class="section-label">📍 出沒地點</div><div class="loc-list">${locs.map(l=>`<div class="loc-tag">${l}</div>`).join('')}</div>`;
+}
+function wikiLink(name){
+  return `<a class="wiki-link" href="https://zh.stardewvalleywiki.com/wiki/${encodeURIComponent(name)}" target="_blank">📖 查看 Wiki</a>`;
+}
+function renderGiftEffect(isToday=false){
+  const mul = isToday ? '×8' : '×1';
+  const birthday = isToday ? '（今天是生日，效果翻8倍！）' : '';
+  return `<div class="px-divider"></div>
+  <div class="section-label">📊 送禮效果${birthday}</div>
+  <div class="gift-effect-table">
+    <div class="gef-row header">
+      <div class="gef-col">喜好程度</div>
+      <div class="gef-col">普通品質</div>
+      <div class="gef-col">銀星</div>
+      <div class="gef-col">金星</div>
+      <div class="gef-col">銥星</div>
+    </div>
+    <div class="gef-row love">
+      <div class="gef-col">❤️ 最愛</div>
+      <div class="gef-col">${isToday?'+640':'+80'}</div>
+      <div class="gef-col">${isToday?'+704':'+88'}</div>
+      <div class="gef-col">${isToday?'+800':'+100'}</div>
+      <div class="gef-col">${isToday?'+960':'+120'} ⭐</div>
+    </div>
+    <div class="gef-row like">
+      <div class="gef-col">⭐ 喜歡</div>
+      <div class="gef-col">${isToday?'+360':'+45'}</div>
+      <div class="gef-col">${isToday?'+396':'+50'}</div>
+      <div class="gef-col">${isToday?'+450':'+56'}</div>
+      <div class="gef-col">${isToday?'+540':'+68'}</div>
+    </div>
+    <div class="gef-row neutral">
+      <div class="gef-col">😐 普通</div>
+      <div class="gef-col gef-span4">${isToday?'+160':'+20'}（品質不影響普通禮物）</div>
+    </div>
+    <div class="gef-row bad">
+      <div class="gef-col">👎 不喜歡</div>
+      <div class="gef-col gef-span4">-20（品質不影響）</div>
+    </div>
+    <div class="gef-row hate">
+      <div class="gef-col">💀 討厭</div>
+      <div class="gef-col gef-span4">-40（品質不影響）</div>
+    </div>
+  </div>
+  ${isToday?'<div class="gift-effect-tip">💡 生日送一個銥星最愛禮物 = +960 好感度，等於接近4顆心！</div>':''}`;
+}
+
+function renderGiftTiers(name){
+  const g=DATA.gifts[name]||{love:[],like:[],dislike:[],hate:[]};
+  const love=(g.love||[]).map(([zh,en])=>giftItem(zh,en,'love')).join('');
+  const like=(g.like||[]).map(([zh,en])=>giftItem(zh,en,'like')).join('');
+  const dislike=(g.dislike||[]).map(([zh,en])=>giftItem(zh,en,'dislike')).join('');
+  const hate=(g.hate||[]).map(([zh,en])=>giftItem(zh,en,'hate')).join('');
+  return `
+    ${love?`<div class="gift-tier"><div class="tier-label tier-love">❤️ 最愛</div><div class="gift-grid">${love}</div></div>`:''}
+    ${like?`<div class="gift-tier"><div class="tier-label tier-like">⭐ 喜歡</div><div class="gift-grid">${like}</div></div>`:''}
+    ${dislike?`<div class="gift-tier"><div class="tier-label tier-dislike">👎 不喜歡（-20好感）</div><div class="gift-grid">${dislike}</div></div>`:''}
+    ${hate?`<div class="gift-tier"><div class="tier-label tier-hate">💀 討厭（-40好感！）</div><div class="gift-grid">${hate}</div></div>`:''}
+  `;
+}
+
+function renderBirthdayCard(npc,season,day,today=false){
+  const clickAttr=today?` onclick="openNpcModal('${npc.en}')" title="點我查看詳情"`:''
+  return `<div class="birthday-card${today?' today-card':''}"${clickAttr}>
+    <div class="card-nameplate">${npc.name}${today?' 🎂 今天生日！':''}</div>
+    <div class="card-body">
+      <div class="card-header-row">
+        <div class="day-hero">${day}</div>
+        <div>${charImg(npc.en)}</div>
+        <div class="npc-info">
+          <div class="npc-name">${npc.name}</div>
+          <div class="npc-date">
+            <span class="si si-${season}">${season}</span>
+            <span>第 ${day} 天</span>
+            ${today?'<span class="birthday-badge">🎂 生日</span>':''}
+          </div>
+        </div>
+      </div>
+      <div class="px-divider"></div>
+      <div class="section-label">🎁 禮物喜好</div>
+      ${renderGiftTiers(npc.name)}
+      ${renderGiftEffect(today)}
+      ${renderHeartEvents(npc.name)}
+      ${renderNpcLocation(npc.name)}
+      ${wikiLink(npc.name)}
+    </div>
+  </div>`;
+}
+
+function renderFestivalCard(fest,season,day){
+  const rewards=fest.rewards.map(r=>`<span class="reward-tag">${r}</span>`).join('');
+  const bannerHtml = fest.img
+    ? `<img class="festival-banner" src="${IMG.event(fest.img)}" alt="${fest.name}" onerror="this.outerHTML='<div class=festival-banner-placeholder>${fest.emoji}</div>'">`
+    : `<div class="festival-banner-placeholder">${fest.emoji}</div>`;
+  return `<div class="festival-card">
+    <div class="card-nameplate" style="color:var(--gold-light)">${fest.emoji} ${fest.name}</div>
+    <div class="festival-body">
+      ${bannerHtml}
+      <div class="festival-body-inner">
+        <div class="festival-header-row">
+          <div class="festival-icon">${fest.emoji}</div>
+          <div>
+            <div class="festival-name">${fest.name}</div>
+            <div class="festival-date"><span class="si si-${season}">${season}</span> 第 <span style="color:var(--gold-light);font-size:1.3em">${day}</span> 天</div>
+          </div>
+        </div>
+        <div class="festival-desc">${fest.desc}</div>
+        <div class="section-label" style="color:var(--gold-light)">🎁 獎勵與效果</div>
+        <div class="festival-rewards">${rewards}</div>
+        ${fest.tip?`<div class="festival-tip">${fest.tip}</div>`:''}
+      </div>
+    </div>
+  </div>`;
+}
+
+const SEASON_ORDER = ['春天','夏天','秋天','冬天'];
+
+function getUpcomingResults(){
+  const results = [];
+  const seasons = [currentSeason, SEASON_ORDER[(SEASON_ORDER.indexOf(currentSeason)+1)%4]];
+  for(const s of seasons){
+    const startDay = (s===currentSeason) ? currentDay+1 : 1;
+    for(let d=startDay; d<=28; d++){
+      const births=DATA.birthdays[s]?.[String(d)]||[];
+      const fest=DATA.festivals[s]?.[String(d)];
+      if(births.length||fest) results.push({season:s,day:d,births,fest});
+      if(results.length>=4) break;
+    }
+    if(results.length>=4) break;
+  }
+  return results;
+}
+
+function renderUpcomingList(){
+  const results=getUpcomingResults();
+  if(!results.length) return '';
+  let html='';
+  results.forEach(({season,day,births,fest})=>{
+    const diffDays = season===currentSeason ? day-currentDay : (28-currentDay)+day;
+    const label = diffDays===1?'明天': season!==currentSeason?`${season}第${day}天`:`第${day}天（${diffDays}天後）`;
+    if(fest){
+      const festThumb = fest.img
+        ? `<img class="mini-avatar-img" src="${IMG.event(fest.img)}" style="object-position:top" onerror="this.outerHTML='<div class=mini-avatar-ph style=font-size:20px>${fest.emoji}</div>'">`
+        : `<div class="mini-avatar-ph" style="font-size:20px">${fest.emoji}</div>`;
+      html+=`<div class="mini-card mini-festival-card">
+        ${festThumb}
+        <div class="mini-info"><div class="mini-name">${fest.name}</div><div class="mini-sub">${label}</div></div>
+        <div class="mini-day">${diffDays}<br>天後</div>
+      </div>`;
+    }
+    births.forEach(npc=>{
+      html+=`<div class="mini-card">
+        ${charImg(npc.en,false)}
+        <div class="mini-info">
+          <div class="mini-name">${npc.name} 🎂</div>
+          <div class="mini-sub">${label}・${(DATA.gifts[npc.name]?.love||[]).slice(0,2).map(([zh])=>zh).join('、')}</div>
+        </div>
+        <div class="mini-day">${diffDays}<br>天後</div>
+      </div>`;
+    });
+  });
+  return html;
+}
+
+function renderUpcoming(){ return renderUpcomingList(); }
+
+function renderToday(){
+  const c=document.getElementById('today');
+  const births=DATA.birthdays[currentSeason]?.[String(currentDay)]||[];
+  const fest=DATA.festivals[currentSeason]?.[String(currentDay)];
+  let html='';
+  if(fest) html+=renderFestivalCard(fest,currentSeason,currentDay);
+  births.forEach(npc=>{html+=renderBirthdayCard(npc,currentSeason,currentDay,true);});
+  if(!html){
+    html=`<div class="today-no-event">
+      <div class="today-no-event-day">${currentDay}</div>
+      <div class="today-no-event-msg">今天沒有生日<br>也沒有活動</div>
+    </div>`;
+    html+=renderUpcomingList();
+  }
+  c.innerHTML=html;
+}
+
+function renderWeek(){
+  const c=document.getElementById('week');
+  let html='',any=false;
+  for(let i=0;i<7;i++){
+    const day=currentDay+i; if(day>28)break;
+    const births=DATA.birthdays[currentSeason]?.[String(day)]||[];
+    const fest=DATA.festivals[currentSeason]?.[String(day)];
+    if(!births.length&&!fest) continue;
+    any=true;
+    const label=i===0?'今天':i===1?'明天':`第 ${day} 天`;
+    const isToday=(i===0);
+    html+=`<div class="date-group-header">📅 ${currentSeason} ${label}（第 ${day} 天）</div>`;
+    if(fest){
+      const festThumb = fest.img
+        ? `<img class="mini-avatar-img" src="${IMG.event(fest.img)}" style="object-position:top" onerror="this.outerHTML='<div class=mini-avatar-ph style=font-size:24px>${fest.emoji}</div>'">`
+        : `<div class="mini-avatar-ph" style="font-size:24px">${fest.emoji}</div>`;
+      html+=`<div class="mini-card mini-festival-card" onclick="toggleWeekDetail('wf_${day}')">
+        ${festThumb}
+        <div class="mini-info"><div class="mini-name">${fest.name}</div><div class="mini-sub">${fest.rewards[0]}</div></div>
+        <div class="mini-day" style="font-size:16px">▼</div>
+      </div>
+      <div id="wf_${day}" class="week-detail-wrap" style="display:none">
+        <div class="festival-desc" style="padding:10px 12px;color:var(--parchment2);font-size:13px;line-height:1.7">${fest.desc}</div>
+        <div style="padding:0 12px 10px;display:flex;flex-wrap:wrap;gap:6px">${fest.rewards.map(r=>`<span class="reward-tag">${r}</span>`).join('')}</div>
+        ${fest.tip?`<div style="padding:0 12px 12px"><div class="festival-tip">${fest.tip}</div></div>`:''}
+      </div>`;
+    }
+    births.forEach(npc=>{
+      const g=DATA.gifts[npc.name]||{love:[],like:[],dislike:[],hate:[]};
+      html+=`<div class="mini-card${isToday?' mini-today-card':''}" onclick="toggleWeekDetail('wn_${day}_${npc.en}')">
+        ${charImg(npc.en,false)}
+        <div class="mini-info">
+          <div class="mini-name">${npc.name}${isToday?' 🎂':''}</div>
+          <div class="mini-sub">最愛：${(g.love||[]).slice(0,2).map(([zh])=>zh).join('、')}</div>
+        </div>
+        <div class="mini-day">第<br>${day}<br>天 ▼</div>
+      </div>
+      <div id="wn_${day}_${npc.en}" class="week-detail-wrap" style="display:none">
+        <div style="padding:12px 14px 0">
+          <div class="section-label">🎁 禮物喜好</div>
+          ${renderGiftTiers(npc.name)}
+          ${renderGiftEffect(isToday)}
+          ${renderHeartEvents(npc.name)}
+          ${renderNpcLocation(npc.name)}
+        </div>
+        <div style="padding:8px 14px 12px">
+          ${wikiLink(npc.name)}
+        </div>
+      </div>`;
+    });
+  }
+  c.innerHTML=any?html:`<div class="empty"><div class="empty-box"><div class="emoji">🌿</div><p>本週沒有生日或節日</p></div></div>`;
+}
+
+function toggleWeekDetail(id){
+  const el=document.getElementById(id);
+  if(!el) return;
+  const isOpen=el.style.display!=='none';
+  el.style.display=isOpen?'none':'block';
+  // 更新箭頭
+  const card=el.previousElementSibling;
+  if(card){
+    const arrow=card.querySelector('.mini-day');
+    if(arrow) arrow.innerHTML=arrow.innerHTML.replace(isOpen?'▲':'▼',isOpen?'▼':'▲');
+  }
+  if(!isOpen) setTimeout(()=>el.scrollIntoView({behavior:'smooth',block:'nearest'}),50);
+}
+
+function renderMonth(){
+  const c=document.getElementById('month');
+  const seasonColors={'春天':'#b8e0b0','夏天':'#f8e880','秋天':'#e09050','冬天':'#a0c8e8'};
+  const dayNames=['日','一','二','三','四','五','六'];
+
+  // 星露谷第1天固定從星期一開始
+  // 每週7天，4週=28天
+  let html=`<div class="page-title">📆 ${currentSeason} 行事曆</div>`;
+  html+=`<div class="cal-legend">`;
+  html+=`<span class="cal-leg-item"><span class="cal-leg-dot" style="background:var(--red)"></span>生日</span>`;
+  html+=`<span class="cal-leg-item"><span class="cal-leg-dot" style="background:var(--gold)"></span>節日</span>`;
+  html+=`<span class="cal-leg-item"><span class="cal-leg-dot" style="background:var(--green)"></span>今天</span>`;
+  html+=`</div>`;
+
+  // 星期標題列
+  html+=`<div class="cal-grid">`;
+  ['一','二','三','四','五','六','日'].forEach(d=>{
+    html+=`<div class="cal-dow">${d}</div>`;
+  });
+
+  // 28天，每7天一排（第1天 = 星期一）
+  for(let day=1;day<=28;day++){
+    const births=DATA.birthdays[currentSeason]?.[String(day)]||[];
+    const fest=DATA.festivals[currentSeason]?.[String(day)];
+    const isToday=day===currentDay;
+    const hasBirth=births.length>0;
+    const hasFest=!!fest;
+
+    let dotHtml='';
+    if(hasFest) dotHtml+=`<span class="cal-dot fest"></span>`;
+    if(hasBirth) dotHtml+=`<span class="cal-dot birth"></span>`;
+
+    let cellClass='cal-cell';
+    if(isToday) cellClass+=' cal-today';
+    if(hasBirth||hasFest) cellClass+=' cal-has-event';
+
+    // 預覽標籤
+    let previewHtml='';
+    if(hasFest) previewHtml+=`<div class="cal-preview-fest">${fest.emoji}</div>`;
+    if(hasBirth) births.forEach(npc=>{
+      previewHtml+=`<div class="cal-preview-npc"><img src="${IMG.char(npc.en)}" onerror="this.style.display='none'" style="width:18px;height:18px;image-rendering:pixelated;vertical-align:middle"> ${npc.name.slice(0,2)}</div>`;
+    });
+
+    html+=`<div class="${cellClass}" onclick="toggleCalDetail(${day})">
+      <div class="cal-daynum">${day}${dotHtml}</div>
+      ${previewHtml}
+    </div>`;
+  }
+  html+=`</div>`;
+
+  // 細節區塊（預設隱藏，點擊日期後顯示）
+  html+=`<div id="calDetail" class="cal-detail-wrap" style="display:none"></div>`;
+
+  c.innerHTML=html;
+}
+
+function toggleCalDetail(day){
+  const detail=document.getElementById('calDetail');
+  // 如果點同一天就收起
+  if(detail.dataset.day===String(day) && detail.style.display!=='none'){
+    detail.style.display='none';
+    detail.dataset.day='';
+    // 取消選取
+    document.querySelectorAll('.cal-cell').forEach(el=>el.classList.remove('cal-selected'));
+    return;
+  }
+  detail.dataset.day=String(day);
+  detail.style.display='block';
+
+  // 選取樣式
+  document.querySelectorAll('.cal-cell').forEach(el=>el.classList.remove('cal-selected'));
+  // 找到第 day 格
+  const cells=document.querySelectorAll('.cal-cell');
+  if(cells[day-1]) cells[day-1].classList.add('cal-selected');
+
+  const births=DATA.birthdays[currentSeason]?.[String(day)]||[];
+  const fest=DATA.festivals[currentSeason]?.[String(day)];
+  const isToday=day===currentDay;
+
+  let html=`<div class="cal-detail-header">
+    <span class="si si-${currentSeason}">${currentSeason}</span>
+    <span style="font-family:var(--font-pixel);font-size:8px;color:var(--gold-light);margin-left:8px">第 <span style="color:var(--gold-light);font-size:1.4em">${day}</span> 天</span>
+    ${isToday?'<span class="birthday-badge" style="margin-left:8px">今天</span>':''}
+    <button class="cal-close-btn" onclick="toggleCalDetail(${day})">✕</button>
+  </div>`;
+
+  if(!births.length && !fest){
+    html+=`<div style="padding:16px;text-align:center;color:var(--wood-light);font-size:13px">這天沒有特別事件</div>`;
+  }
+  if(fest){
+    const rewards=fest.rewards.map(r=>`<span class="reward-tag">${r}</span>`).join('');
+    const calBanner = fest.img
+      ? `<img src="${IMG.event(fest.img)}" style="width:100%;height:120px;object-fit:cover;object-position:top;display:block;border-bottom:3px solid var(--wood-dark)" onerror="this.remove()">`
+      : '';
+    html+=`${calBanner}<div style="padding:12px 14px 0">
+      <div class="festival-header-row">
+        <div class="festival-icon">${fest.emoji}</div>
+        <div><div class="festival-name">${fest.name}</div></div>
+      </div>
+      <div class="festival-desc" style="margin-bottom:8px">${fest.desc}</div>
+      <div class="festival-rewards" style="margin-bottom:8px">${rewards}</div>
+      ${fest.tip?`<div class="festival-tip">${fest.tip}</div>`:''}
+    </div>`;
+  }
+  births.forEach(npc=>{
+    html+=`<div style="padding:12px 14px 0">
+      <div class="card-header-row">
+        <div>${charImg(npc.en)}</div>
+        <div class="npc-info">
+          <div class="npc-name">${npc.name}</div>
+          <div class="npc-date">${isToday?'<span class="birthday-badge">🎂 今天生日</span>':''}</div>
+        </div>
+      </div>
+      <div class="px-divider"></div>
+      <div class="section-label">🎁 禮物喜好</div>
+      ${renderGiftTiers(npc.name)}
+      ${renderGiftEffect(isToday)}
+      ${renderHeartEvents(npc.name)}
+      ${renderNpcLocation(npc.name)}
+      ${wikiLink(npc.name)}
+    </div>`;
+  });
+
+  detail.innerHTML=html;
+  // 捲動到細節區
+  setTimeout(()=>detail.scrollIntoView({behavior:'smooth',block:'nearest'}),50);
+}
+
+function renderNpc(){
+  const c=document.getElementById('npc');
+  if(c.dataset.rendered) return;
+  c.dataset.rendered='1';
+  const all=[];
+  Object.values(DATA.birthdays).forEach(s=>Object.values(s).forEach(arr=>arr.forEach(n=>all.push(n))));
+  const unique=[...new Map(all.map(n=>[n.name,n])).values()].sort((a,b)=>a.name.localeCompare(b.name,'zh-Hant'));
+  let html=`<div class="page-title">👥 所有村民 好感度指南</div>`;
+  unique.forEach(npc=>{
+    html+=`<div class="birthday-card">
+      <div class="card-nameplate">${npc.name}</div>
+      <div class="card-body">
+        <div class="card-header-row">
+          <div>${charImg(npc.en)}</div>
+          <div class="npc-info"><div class="npc-name">${npc.name}</div></div>
+        </div>
+        <div class="px-divider"></div>
+        <div class="section-label">🎁 禮物喜好</div>
+        ${renderGiftTiers(npc.name)}
+        ${renderHeartEvents(npc.name)}
+        ${renderNpcLocation(npc.name)}
+        ${wikiLink(npc.name)}
+      </div>
+    </div>`;
+  });
+  c.innerHTML=html;
+}
+
+// 整理所有村民的完整索引（含英文名對照）
+const NPC_EN_MAP = {
+  "Kent":"肯特","Haley":"海莉","Abigail":"阿比蓋爾","Pierre":"皮埃爾","Leah":"莉亞",
+  "Robin":"羅賓","Gus":"甘斯","Caroline":"卡洛琳","Dwarf":"小精靈","Jodi":"喬迪",
+  "Willy":"溫蒂","Leo":"萊歐","Elliott":"艾利奧特","Sandy":"山迪","Emily":"艾米麗",
+  "Pam":"皮帕","Maru":"瑪魯","Lewis":"路易斯","Sebastian":"賽巴斯汀","Sam":"山姆",
+  "Marnie":"瑪妮","Alex":"亞歷克斯","George":"喬治","Jas":"賈斯","Penny":"潘妮",
+  "Clint":"克林特","Harvey":"哈維","Wizard":"魔法師","Vincent":"文森特","Krobus":"小黑",
+  "Evelyn":"伊芙琳","Shane":"謝恩","Douglas":"道格拉斯"
+};
+
+let currentSearchType = 'npc';
+
+function setSearchType(type){
+  currentSearchType = type;
+  document.querySelectorAll('.search-type-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById(`stype-${type}`).classList.add('active');
+  const input = document.getElementById('npcSearchInput');
+  const hint = document.getElementById('searchHint');
+  if(type==='npc'){
+    input.placeholder = '輸入村民名字…';
+    hint.textContent = '支援中文名或英文名，例如：阿比蓋爾、Abigail、謝恩、Shane';
+  } else {
+    input.placeholder = '輸入節日名稱或關鍵字…';
+    hint.textContent = '例如：蛋蛋節、花舞節、Luau、冬日星盛宴、南瓜、禮物';
+  }
+  input.value = '';
+  document.getElementById('searchResults').innerHTML = '';
+  input.focus();
+}
+
+// 從生日資料收集所有 NPC
+function getAllNpcs(){
+  const all=[];
+  Object.entries(DATA.birthdays).forEach(([season, days])=>{
+    Object.entries(days).forEach(([day, npcs])=>{
+      npcs.forEach(npc=>all.push({...npc, season, day:parseInt(day)}));
+    });
+  });
+  return [...new Map(all.map(n=>[n.name,n])).values()];
+}
+
+// 收集所有節日
+function getAllFestivals(){
+  const result=[];
+  Object.entries(DATA.festivals).forEach(([season, days])=>{
+    Object.entries(days).forEach(([day, fest])=>{
+      result.push({...fest, season, day:parseInt(day)});
+    });
+  });
+  return result;
+}
+
+function doSearch(){
+  const q = document.getElementById('npcSearchInput').value.trim().toLowerCase();
+  const results = document.getElementById('searchResults');
+  if(!q){ results.innerHTML=''; return; }
+
+  if(currentSearchType === 'npc') searchNpc(q, results);
+  else searchFestival(q, results);
+}
+
+function searchNpc(q, results){
+  const allNpcs = getAllNpcs();
+  const matched = allNpcs.filter(npc=>{
+    const zhMatch = npc.name.toLowerCase().includes(q);
+    const enMatch = npc.en.toLowerCase().includes(q);
+    const reverseMatch = Object.entries(NPC_EN_MAP).some(([en,zh])=>
+      en.toLowerCase().includes(q) && zh === npc.name
+    );
+    return zhMatch || enMatch || reverseMatch;
+  });
+
+  if(!matched.length){
+    results.innerHTML=`<div class="search-no-result"><div class="empty-box"><div style="font-size:36px">🤔</div><p>找不到「${q}」<br>試試看其他名字？</p></div></div>`;
+    return;
+  }
+
+  let html='';
+  matched.forEach(npc=>{
+    html+=`<div class="birthday-card">
+      <div class="card-nameplate">${npc.name} · ${npc.en}</div>
+      <div class="card-body">
+        <div class="card-header-row">
+          <div>${charImg(npc.en)}</div>
+          <div class="npc-info">
+            <div class="npc-name">${npc.name}</div>
+            <div class="npc-date">
+              <span class="si si-${npc.season}">${npc.season}</span>
+              <span>生日：第 ${npc.day} 天</span>
+            </div>
+          </div>
+        </div>
+        <div class="px-divider"></div>
+        <div class="section-label">🎁 禮物喜好</div>
+        ${renderGiftTiers(npc.name)}
+        ${renderHeartEvents(npc.name)}
+        ${renderNpcLocation(npc.name)}
+        ${wikiLink(npc.name)}
+      </div>
+    </div>`;
+  });
+  results.innerHTML=html;
+}
+
+function searchFestival(q, results){
+  const allFests = getAllFestivals();
+  const matched = allFests.filter(f=>{
+    return (
+      f.name.toLowerCase().includes(q) ||
+      f.desc.toLowerCase().includes(q) ||
+      f.season.toLowerCase().includes(q) ||
+      f.rewards.some(r=>r.toLowerCase().includes(q)) ||
+      (f.tip && f.tip.toLowerCase().includes(q))
+    );
+  });
+
+  if(!matched.length){
+    results.innerHTML=`<div class="search-no-result"><div class="empty-box"><div style="font-size:36px">🤔</div><p>找不到「${q}」相關節日<br>試試：蛋蛋節、花舞節、禮物…</p></div></div>`;
+    return;
+  }
+
+  let html='';
+  matched.forEach(f=>{
+    html += renderFestivalCard(f, f.season, f.day);
+  });
+  results.innerHTML=html;
+}
+
+// ── 載入資料 ──────────────────────────────────────
+async function init(){
+  try {
+    const res = await fetch('stardew/stardew_data.json');
+    DATA = await res.json();
+  } catch(e) {
+    document.body.innerHTML = `<div style="color:#f0e6c8;font-family:monospace;padding:40px;background:#2d1f0e;min-height:100vh">
+      <h2>⚠️ 無法載入資料</h2>
+      <p style="margin-top:16px">請確認 <code>stardew/stardew_data.json</code> 存在，<br>且網頁是從伺服器開啟（不支援直接開啟 file://）。</p>
+      <p style="margin-top:12px;opacity:.6;font-size:12px">${e}</p>
+    </div>`;
+    return;
+  }
+  // 建立英文名反查表
+  Object.entries(DATA.birthdays).forEach(([season, days]) => {
+    Object.entries(days).forEach(([day, npcs]) => {
+      npcs.forEach(npc => { NPC_BY_EN[npc.en] = {...npc, season, day}; });
+    });
+  });
+  renderToday(); renderWeek(); renderMonth();
+}
+init();
+
+// ── NPC Modal ──────────────────────────────────────
+const NPC_BY_EN = {};
+
+function openNpcModal(en) {
+  const npc = NPC_BY_EN[en];
+  if (!npc) return;
+  const isToday = npc.season === currentSeason && Number(npc.day) === currentDay;
+  const body = document.getElementById('npcModalBody');
+  body.innerHTML = `
+    <div class="card-header-row">
+      <div>
+        <img class="npc-avatar" src="${IMG.char(en)}" alt="${npc.name}" onerror="this.style.display='none'">
+      </div>
+      <div class="npc-info">
+        <div class="npc-name">${npc.name}</div>
+        <div class="npc-date">
+          <span class="si si-${npc.season}">${npc.season}</span>
+          <span>第 ${npc.day} 天</span>
+          ${isToday ? '<span class="birthday-badge">🎂 今天生日</span>' : ''}
+        </div>
+      </div>
+    </div>
+    <div class="px-divider"></div>
+    <div class="section-label">🎁 禮物喜好</div>
+    ${renderGiftTiers(npc.name)}
+    ${renderGiftEffect(isToday)}
+    ${renderHeartEvents(npc.name)}
+    ${renderNpcLocation(npc.name)}
+    ${wikiLink(npc.name)}
+  `;
+  document.getElementById('npcModal').style.display = 'flex';
+}
+
+function closeNpcModal() {
+  document.getElementById('npcModal').style.display = 'none';
+}
+</script>
+
+<!-- NPC Modal -->
+<div id="npcModal" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.7);align-items:center;justify-content:center;padding:16px" onclick="if(event.target===this)closeNpcModal()">
+  <div style="background:var(--parchment);border:4px solid var(--wood-dark);box-shadow:6px 6px 0 var(--wood-dark);max-width:520px;width:100%;max-height:88vh;overflow-y:auto;position:relative">
+    <div style="background:var(--wood-dark);padding:8px 12px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:1">
+      <span style="font-family:var(--font-pixel);font-size:8px;color:var(--gold-light)">📋 角色詳情</span>
+      <button onclick="closeNpcModal()" style="background:var(--red);color:#fff;border:2px solid var(--wood-dark);width:28px;height:28px;font-size:14px;cursor:pointer;box-shadow:2px 2px 0 var(--wood-dark)">✕</button>
+    </div>
+    <div id="npcModalBody" style="padding:14px"></div>
+  </div>
+</div>
+</body>
+</html>
