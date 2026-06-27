@@ -1063,6 +1063,7 @@ function selectSeason(s){
   document.querySelectorAll('.season-tab').forEach(t=>t.classList.remove('active'));
   const m={'春天':'spring','夏天':'summer','秋天':'fall','冬天':'winter'};
   document.querySelector(`.season-tab.${m[s]}`).classList.add('active');
+  renderToday();renderWeek();renderMonth();
 }
 
 function switchTab(btn,id){
