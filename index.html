@@ -125,6 +125,7 @@ body {
   border-radius: 1px;
 }
 .season-tab:active { transform: translate(2px,2px); box-shadow: 1px 1px 0 var(--wood-dark); }
+.season-icon { width: 14px; height: 14px; vertical-align: middle; image-rendering: pixelated; object-fit: contain; margin-right: 2px; }
 .season-tab.spring.active { background: #b8e0b0; border-color: #2d5a30; box-shadow: 3px 3px 0 #1a3520; color: #1a3520; }
 .season-tab.summer.active { background: #f5d060; border-color: #7a5010; box-shadow: 3px 3px 0 #4a3010; color: #4a3010; }
 .season-tab.fall.active   { background: #e09050; border-color: #6a2a10; box-shadow: 3px 3px 0 #3a1508; color: #3a1508; }
@@ -192,6 +193,16 @@ body {
   color: var(--gold-light);
   border-bottom-color: var(--gold-light);
   background: rgba(212,160,23,.1);
+}
+
+.tab-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: -3px;
+  margin-right: 2px;
+  object-fit: contain;
+  image-rendering: pixelated;
 }
 
 /* ─── Content ─── */
@@ -615,6 +626,7 @@ body {
   white-space: nowrap;
   line-height: 1.6;
 }
+.mini-date-badge { font-size: 11px; }
 
 /* ─── Empty State ─── */
 .empty {
@@ -873,6 +885,16 @@ body {
   border-color: var(--wood-dark);
 }
 .search-input-row { margin: 0 0 6px; }
+.site-footer {
+  font-size: 10px;
+  color: var(--wood-light);
+  opacity: .7;
+  text-align: center;
+  padding: 16px 20px 24px;
+  line-height: 1.7;
+}
+.site-footer a { color: var(--wood-light); text-decoration: underline; }
+
 .search-hint {
   font-size: 11px;
   color: var(--wood-light);
@@ -944,10 +966,10 @@ body {
 <!-- Input -->
 <div class="input-section">
   <div class="season-tabs">
-    <button class="season-tab spring active" onclick="selectSeason('春天')">🌸 春天</button>
-    <button class="season-tab summer" onclick="selectSeason('夏天')">☀️ 夏天</button>
-    <button class="season-tab fall" onclick="selectSeason('秋天')">🍂 秋天</button>
-    <button class="season-tab winter" onclick="selectSeason('冬天')">❄️ 冬天</button>
+    <button class="season-tab spring active" onclick="selectSeason('春天')"><img class="season-icon" src="stardew/seasons/Spring.png" alt=""> 春天</button>
+    <button class="season-tab summer" onclick="selectSeason('夏天')"><img class="season-icon" src="stardew/seasons/Summer.png" alt=""> 夏天</button>
+    <button class="season-tab fall" onclick="selectSeason('秋天')"><img class="season-icon" src="stardew/seasons/Fall.png" alt=""> 秋天</button>
+    <button class="season-tab winter" onclick="selectSeason('冬天')"><img class="season-icon" src="stardew/seasons/Winter.png" alt=""> 冬天</button>
   </div>
   <div class="input-row">
     <input class="day-input" type="number" id="dayInput" placeholder="日期 1 – 28" min="1" max="28" value="1">
@@ -957,11 +979,11 @@ body {
 
 <!-- Tabs -->
 <div class="view-tabs">
-  <button class="view-tab active" onclick="switchTab(this,'today')">📅 今天</button>
-  <button class="view-tab" onclick="switchTab(this,'week')">🗓 本週</button>
-  <button class="view-tab" onclick="switchTab(this,'month')">📆 本季</button>
-  <button class="view-tab" onclick="switchTab(this,'npc')">👥 村民</button>
-  <button class="view-tab" onclick="switchTab(this,'search')">🔍 搜尋</button>
+  <button class="view-tab active" onclick="switchTab(this,'today')"><img class="tab-icon" src="stardew/icons/White_Chicken.png" alt=""> 今天</button>
+  <button class="view-tab" onclick="switchTab(this,'week')"><img class="tab-icon" src="stardew/icons/Brown_Chicken.png" alt=""> 本週</button>
+  <button class="view-tab" onclick="switchTab(this,'month')"><img class="tab-icon" src="stardew/icons/Blue_Chicken.png" alt=""> 本季</button>
+  <button class="view-tab" onclick="switchTab(this,'npc')"><img class="tab-icon" src="stardew/icons/Void_Chicken.png" alt=""> 村民</button>
+  <button class="view-tab" onclick="switchTab(this,'search')"><img class="tab-icon" src="stardew/icons/Golden_Chicken.png" alt=""> 搜尋</button>
 </div>
 
 <div class="content">
@@ -985,12 +1007,52 @@ body {
   </div>
 </div>
 
+<div class="site-footer">
+  非官方玩家自製工具，僅供個人遊戲輔助查詢，非商業用途。與 ConcernedApe LLC 無關，未經其授權或認可。
+  村民／物品／節慶圖示取自 <a href="https://stardewvalleywiki.com/" target="_blank" rel="noopener">Stardew Valley Wiki</a>，版權歸原作者所有。
+</div>
+
 <script>
 const IMG = {
   char:  n => `stardew/characters/${n}.png`,
   item:  n => `stardew/items/${n}.png`,
   event: n => `stardew/events/${n}.png`
 };
+
+function seasonBadge(season){
+  return `<span class="si si-${season}">${seasonIcon(season)}${season}</span>`;
+}
+
+// 原創 SVG 圖標（純幾何圖形手繪，非遊戲素材）
+function chickenSvg(body, comb){
+  return `<svg viewBox="0 0 24 24" width="15" height="15">
+    <ellipse cx="11" cy="15" rx="8" ry="6.5" fill="${body}" stroke="#5c3a1e" stroke-width="1.2"/>
+    <circle cx="13" cy="7" r="4.2" fill="${body}" stroke="#5c3a1e" stroke-width="1.2"/>
+    <polygon points="10.5,3.5 12.5,3.5 11,0.8" fill="#c0392b" stroke="#5c3a1e" stroke-width="0.6"/>
+    <polygon points="16.5,7 20,7.8 16.5,9" fill="#d4a017" stroke="#5c3a1e" stroke-width="0.6"/>
+    <circle cx="14.3" cy="6.3" r="0.9" fill="#1a0e05"/>
+  </svg>`;
+}
+const TAB_ICONS = {
+  today:  chickenSvg('#fdfaf3','#c0392b'),
+  week:   chickenSvg('#8b5e3c','#c0392b'),
+  month:  chickenSvg('#6aa3c8','#c0392b'),
+  npc:    chickenSvg('#4a2d6e','#e0c0ff'),
+  search: chickenSvg('#f0c040','#c0392b')
+};
+Object.entries(TAB_ICONS).forEach(([k,svg])=>{
+  const el=document.getElementById('ti-'+k);
+  if(el) el.innerHTML=svg;
+});
+function seasonIcon(season){
+  const icons = {
+    "春天": `<svg viewBox="0 0 24 24" width="13" height="13" style="vertical-align:-2px;margin-right:3px"><path d="M12 22 V12" stroke="#4a7c59" stroke-width="2" fill="none"/><path d="M12 12 C6 12 6 4 12 4 C12 10 12 12 12 12 Z" fill="#7cb87e" stroke="#2d5a30" stroke-width="1"/><path d="M12 14 C18 14 18 7 12 7 C12 12 12 14 12 14 Z" fill="#9ed99f" stroke="#2d5a30" stroke-width="1"/></svg>`,
+    "夏天": `<svg viewBox="0 0 24 24" width="13" height="13" style="vertical-align:-2px;margin-right:3px"><circle cx="12" cy="12" r="5" fill="#f0c040" stroke="#7a5010" stroke-width="1"/><g stroke="#d4a017" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="23"/><line x1="1" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="23" y2="12"/><line x1="4.5" y1="4.5" x2="6.5" y2="6.5"/><line x1="17.5" y1="17.5" x2="19.5" y2="19.5"/><line x1="4.5" y1="19.5" x2="6.5" y2="17.5"/><line x1="17.5" y1="6.5" x2="19.5" y2="4.5"/></g></svg>`,
+    "秋天": `<svg viewBox="0 0 24 24" width="13" height="13" style="vertical-align:-2px;margin-right:3px"><path d="M12 3 C18 5 19 12 12 21 C5 12 6 5 12 3 Z" fill="#e09050" stroke="#6a2a10" stroke-width="1"/><line x1="12" y1="6" x2="12" y2="19" stroke="#6a2a10" stroke-width="1"/></svg>`,
+    "冬天": `<svg viewBox="0 0 24 24" width="13" height="13" style="vertical-align:-2px;margin-right:3px"><g stroke="#1a4a6a" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="5" y1="5" x2="19" y2="19"/><line x1="5" y1="19" x2="19" y2="5"/></g><g fill="#1a4a6a"><circle cx="12" cy="2" r="1.2"/><circle cx="12" cy="22" r="1.2"/><circle cx="2" cy="12" r="1.2"/><circle cx="22" cy="12" r="1.2"/></g></svg>`
+  };
+  return icons[season]||'';
+}
 
 let DATA = null;
 
@@ -1044,7 +1106,7 @@ function renderNpcLocation(name){
   return `<div class="px-divider"></div><div class="section-label">📍 出沒地點</div><div class="loc-list">${locs.map(l=>`<div class="loc-tag">${l}</div>`).join('')}</div>`;
 }
 function wikiLink(name){
-  return `<a class="wiki-link" href="https://zh.stardewvalleywiki.com/wiki/${encodeURIComponent(name)}" target="_blank">📖 查看 Wiki</a>`;
+  return `<a class="wiki-link" href="https://zh.stardewvalleywiki.com/${encodeURIComponent(name)}" target="_blank">📖 查看 Wiki</a>`;
 }
 function renderGiftEffect(isToday=false){
   const mul = isToday ? '×8' : '×1';
@@ -1114,7 +1176,7 @@ function renderBirthdayCard(npc,season,day,today=false){
         <div class="npc-info">
           <div class="npc-name">${npc.name}</div>
           <div class="npc-date">
-            <span class="si si-${season}">${season}</span>
+            ${seasonBadge(season)}
             <span>第 ${day} 天</span>
             ${today?'<span class="birthday-badge">🎂 生日</span>':''}
           </div>
@@ -1145,7 +1207,7 @@ function renderFestivalCard(fest,season,day){
           <div class="festival-icon">${fest.emoji}</div>
           <div>
             <div class="festival-name">${fest.name}</div>
-            <div class="festival-date"><span class="si si-${season}">${season}</span> 第 <span style="color:var(--gold-light);font-size:1.3em">${day}</span> 天</div>
+            <div class="festival-date">${seasonBadge(season)} 第 <span style="color:var(--gold-light);font-size:1.3em">${day}</span> 天</div>
           </div>
         </div>
         <div class="festival-desc">${fest.desc}</div>
@@ -1181,23 +1243,28 @@ function renderUpcomingList(){
   let html='';
   results.forEach(({season,day,births,fest})=>{
     const diffDays = season===currentSeason ? day-currentDay : (28-currentDay)+day;
-    const label = diffDays===1?'明天': season!==currentSeason?`${season}第${day}天`:`第${day}天（${diffDays}天後）`;
+    const label = diffDays===1?'明天': season!==currentSeason?`${season}第${day}天`:`第${day}天`;
+    const dateBadge = `<div class="mini-day mini-date-badge">第<br>${String(day).padStart(2,'0')}<br>天</div>`;
     if(fest){
       const festThumb = fest.img
         ? `<img class="mini-avatar-img" src="${IMG.event(fest.img)}" style="object-position:top" onerror="this.outerHTML='<div class=mini-avatar-ph style=font-size:20px>${fest.emoji}</div>'">`
         : `<div class="mini-avatar-ph" style="font-size:20px">${fest.emoji}</div>`;
-      html+=`<div class="mini-card mini-festival-card">
+      html+=`<div class="mini-card mini-festival-card" onclick="openFestModal('${season}',${day})" title="點我查看詳情">
+        ${dateBadge}
         ${festThumb}
         <div class="mini-info"><div class="mini-name">${fest.name}</div><div class="mini-sub">${label}</div></div>
         <div class="mini-day">${diffDays}<br>天後</div>
       </div>`;
     }
     births.forEach(npc=>{
-      html+=`<div class="mini-card">
+      const giftText = (DATA.gifts[npc.name]?.love||[]).slice(0,2).map(([zh])=>zh).join('、');
+      const subText = diffDays===1||season!==currentSeason ? `${label}・${giftText}` : giftText;
+      html+=`<div class="mini-card" onclick="openNpcModal('${npc.en}')" title="點我查看詳情">
+        ${dateBadge}
         ${charImg(npc.en,false)}
         <div class="mini-info">
           <div class="mini-name">${npc.name} 🎂</div>
-          <div class="mini-sub">${label}・${(DATA.gifts[npc.name]?.love||[]).slice(0,2).map(([zh])=>zh).join('、')}</div>
+          <div class="mini-sub">${subText}</div>
         </div>
         <div class="mini-day">${diffDays}<br>天後</div>
       </div>`;
@@ -1236,15 +1303,16 @@ function renderWeek(){
     any=true;
     const label=i===0?'今天':i===1?'明天':`第 ${day} 天`;
     const isToday=(i===0);
-    html+=`<div class="date-group-header">📅 ${currentSeason} ${label}（第 ${day} 天）</div>`;
+    const dayHint=(i===0||i===1)?`（第 ${day} 天）`:'';
+    html+=`<div class="date-group-header">📅 ${currentSeason} ${label}${dayHint}</div>`;
     if(fest){
       const festThumb = fest.img
         ? `<img class="mini-avatar-img" src="${IMG.event(fest.img)}" style="object-position:top" onerror="this.outerHTML='<div class=mini-avatar-ph style=font-size:24px>${fest.emoji}</div>'">`
         : `<div class="mini-avatar-ph" style="font-size:24px">${fest.emoji}</div>`;
-      html+=`<div class="mini-card mini-festival-card" onclick="toggleWeekDetail('wf_${day}')">
+      html+=`<div class="mini-card${isToday?' mini-today-card':''} mini-festival-card" onclick="toggleWeekDetail('wf_${day}')">
+        <div class="mini-day">${isToday?'今<br>天 ▼':`第<br>${String(day).padStart(2,'0')}<br>天 ▼`}</div>
         ${festThumb}
-        <div class="mini-info"><div class="mini-name">${fest.name}</div><div class="mini-sub">${fest.rewards[0]}</div></div>
-        <div class="mini-day" style="font-size:16px">▼</div>
+        <div class="mini-info"><div class="mini-name">${fest.name}${isToday?' 🎉':''}</div><div class="mini-sub">${fest.rewards[0]}</div></div>
       </div>
       <div id="wf_${day}" class="week-detail-wrap" style="display:none">
         <div class="festival-desc" style="padding:10px 12px;color:var(--parchment2);font-size:13px;line-height:1.7">${fest.desc}</div>
@@ -1255,12 +1323,12 @@ function renderWeek(){
     births.forEach(npc=>{
       const g=DATA.gifts[npc.name]||{love:[],like:[],dislike:[],hate:[]};
       html+=`<div class="mini-card${isToday?' mini-today-card':''}" onclick="toggleWeekDetail('wn_${day}_${npc.en}')">
+        <div class="mini-day">${isToday?'今<br>天 ▼':`第<br>${String(day).padStart(2,'0')}<br>天 ▼`}</div>
         ${charImg(npc.en,false)}
         <div class="mini-info">
           <div class="mini-name">${npc.name}${isToday?' 🎂':''}</div>
           <div class="mini-sub">最愛：${(g.love||[]).slice(0,2).map(([zh])=>zh).join('、')}</div>
         </div>
-        <div class="mini-day">第<br>${day}<br>天 ▼</div>
       </div>
       <div id="wn_${day}_${npc.en}" class="week-detail-wrap" style="display:none">
         <div style="padding:12px 14px 0">
@@ -1451,13 +1519,13 @@ function renderNpc(){
 
 // 整理所有村民的完整索引（含英文名對照）
 const NPC_EN_MAP = {
-  "Kent":"肯特","Haley":"海莉","Abigail":"阿比蓋爾","Pierre":"皮埃爾","Leah":"莉亞",
-  "Robin":"羅賓","Gus":"甘斯","Caroline":"卡洛琳","Dwarf":"小精靈","Jodi":"喬迪",
-  "Willy":"溫蒂","Leo":"萊歐","Elliott":"艾利奧特","Sandy":"山迪","Emily":"艾米麗",
-  "Pam":"皮帕","Maru":"瑪魯","Lewis":"路易斯","Sebastian":"賽巴斯汀","Sam":"山姆",
-  "Marnie":"瑪妮","Alex":"亞歷克斯","George":"喬治","Jas":"賈斯","Penny":"潘妮",
-  "Clint":"克林特","Harvey":"哈維","Wizard":"魔法師","Vincent":"文森特","Krobus":"小黑",
-  "Evelyn":"伊芙琳","Shane":"謝恩","Douglas":"道格拉斯"
+  "Kent":"肯特","Haley":"海莉","Abigail":"阿比盖尔","Pierre":"皮埃尔","Leah":"莉亚",
+  "Robin":"罗宾","Gus":"格斯","Caroline":"卡洛琳","Dwarf":"矮人","Jodi":"乔迪",
+  "Willy":"威利","Leo":"雷欧","Elliott":"艾利欧特","Sandy":"桑迪","Emily":"艾米丽",
+  "Pam":"潘姆","Maru":"玛鲁","Lewis":"刘易斯","Sebastian":"塞巴斯蒂安","Sam":"山姆",
+  "Marnie":"玛妮","Alex":"亚历克斯","George":"乔治","Jas":"贾斯","Penny":"潘妮",
+  "Clint":"克林特","Harvey":"哈维","Wizard":"法师","Vincent":"文森特","Krobus":"科罗布斯",
+  "Evelyn":"艾芙琳","Shane":"谢恩","Demetrius":"德米特里厄斯","Linus":"莱纳斯"
 };
 
 let currentSearchType = 'npc';
@@ -1637,6 +1705,17 @@ function openNpcModal(en) {
 function closeNpcModal() {
   document.getElementById('npcModal').style.display = 'none';
 }
+
+function openFestModal(season, day) {
+  const fest = DATA.festivals[season]?.[String(day)];
+  if (!fest) return;
+  document.getElementById('festModalBody').innerHTML = renderFestivalCard(fest, season, day);
+  document.getElementById('festModal').style.display = 'flex';
+}
+
+function closeFestModal() {
+  document.getElementById('festModal').style.display = 'none';
+}
 </script>
 
 <!-- NPC Modal -->
@@ -1647,6 +1726,17 @@ function closeNpcModal() {
       <button onclick="closeNpcModal()" style="background:var(--red);color:#fff;border:2px solid var(--wood-dark);width:28px;height:28px;font-size:14px;cursor:pointer;box-shadow:2px 2px 0 var(--wood-dark)">✕</button>
     </div>
     <div id="npcModalBody" style="padding:14px"></div>
+  </div>
+</div>
+
+<!-- Festival Modal -->
+<div id="festModal" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.7);align-items:center;justify-content:center;padding:16px" onclick="if(event.target===this)closeFestModal()">
+  <div style="background:var(--parchment);border:4px solid var(--wood-dark);box-shadow:6px 6px 0 var(--wood-dark);max-width:520px;width:100%;max-height:88vh;overflow-y:auto;position:relative">
+    <div style="background:var(--wood-dark);padding:8px 12px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:1">
+      <span style="font-family:var(--font-pixel);font-size:8px;color:var(--gold-light)">🎉 節日活動詳情</span>
+      <button onclick="closeFestModal()" style="background:var(--red);color:#fff;border:2px solid var(--wood-dark);width:28px;height:28px;font-size:14px;cursor:pointer;box-shadow:2px 2px 0 var(--wood-dark)">✕</button>
+    </div>
+    <div id="festModalBody" style="padding:14px"></div>
   </div>
 </div>
 </body>

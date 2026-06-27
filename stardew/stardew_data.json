@@ -1,312 +1,2842 @@
 {
   "birthdays": {
     "春天": {
-      "4":  [{"name":"肯特","en":"Kent"}],
-      "13": [{"name":"海莉","en":"Haley"}],
-      "18": [{"name":"阿比蓋爾","en":"Abigail"}],
-      "20": [{"name":"皮埃爾","en":"Pierre"}],
-      "24": [{"name":"莉亞","en":"Leah"}]
+      "4": [
+        {
+          "name": "肯特",
+          "en": "Kent"
+        }
+      ],
+      "7": [
+        {
+          "name": "刘易斯",
+          "en": "Lewis"
+        }
+      ],
+      "10": [
+        {
+          "name": "文森特",
+          "en": "Vincent"
+        }
+      ],
+      "14": [
+        {
+          "name": "海莉",
+          "en": "Haley"
+        }
+      ],
+      "18": [
+        {
+          "name": "潘姆",
+          "en": "Pam"
+        }
+      ],
+      "20": [
+        {
+          "name": "谢恩",
+          "en": "Shane"
+        }
+      ],
+      "26": [
+        {
+          "name": "皮埃尔",
+          "en": "Pierre"
+        }
+      ],
+      "27": [
+        {
+          "name": "艾米丽",
+          "en": "Emily"
+        }
+      ]
     },
     "夏天": {
-      "4":  [{"name":"羅賓","en":"Robin"}],
-      "8":  [{"name":"甘斯","en":"Gus"}],
-      "10": [{"name":"卡洛琳","en":"Caroline"}],
-      "13": [{"name":"小精靈","en":"Dwarf"}],
-      "17": [{"name":"喬迪","en":"Jodi"}],
-      "19": [{"name":"溫蒂","en":"Willy"}],
-      "22": [{"name":"萊歐","en":"Leo"}],
-      "24": [{"name":"艾利奧特","en":"Elliott"}],
-      "26": [{"name":"山迪","en":"Sandy"}],
-      "28": [{"name":"艾米麗","en":"Emily"}]
+      "4": [
+        {
+          "name": "贾斯",
+          "en": "Jas"
+        }
+      ],
+      "8": [
+        {
+          "name": "格斯",
+          "en": "Gus"
+        }
+      ],
+      "10": [
+        {
+          "name": "玛鲁",
+          "en": "Maru"
+        }
+      ],
+      "13": [
+        {
+          "name": "亚历克斯",
+          "en": "Alex"
+        }
+      ],
+      "17": [
+        {
+          "name": "山姆",
+          "en": "Sam"
+        }
+      ],
+      "19": [
+        {
+          "name": "德米特里厄斯",
+          "en": "Demetrius"
+        }
+      ],
+      "22": [
+        {
+          "name": "矮人",
+          "en": "Dwarf"
+        }
+      ],
+      "24": [
+        {
+          "name": "威利",
+          "en": "Willy"
+        }
+      ],
+      "26": [
+        {
+          "name": "雷欧",
+          "en": "Leo"
+        }
+      ]
     },
     "秋天": {
-      "2":  [{"name":"皮帕","en":"Pam"}],
-      "3":  [{"name":"瑪魯","en":"Maru"}],
-      "5":  [{"name":"路易斯","en":"Lewis"}],
-      "11": [{"name":"賽巴斯汀","en":"Sebastian"}],
-      "13": [{"name":"山姆","en":"Sam"}],
-      "18": [{"name":"瑪妮","en":"Marnie"}],
-      "20": [{"name":"亞歷克斯","en":"Alex"}],
-      "24": [{"name":"喬治","en":"George"}],
-      "26": [{"name":"賈斯","en":"Jas"}]
+      "2": [
+        {
+          "name": "潘妮",
+          "en": "Penny"
+        }
+      ],
+      "5": [
+        {
+          "name": "艾利欧特",
+          "en": "Elliott"
+        }
+      ],
+      "11": [
+        {
+          "name": "乔迪",
+          "en": "Jodi"
+        }
+      ],
+      "13": [
+        {
+          "name": "阿比盖尔",
+          "en": "Abigail"
+        }
+      ],
+      "15": [
+        {
+          "name": "桑迪",
+          "en": "Sandy"
+        }
+      ],
+      "18": [
+        {
+          "name": "玛妮",
+          "en": "Marnie"
+        }
+      ],
+      "21": [
+        {
+          "name": "罗宾",
+          "en": "Robin"
+        }
+      ],
+      "24": [
+        {
+          "name": "乔治",
+          "en": "George"
+        }
+      ]
     },
     "冬天": {
-      "2":  [{"name":"潘妮","en":"Penny"}],
-      "6":  [{"name":"克林特","en":"Clint"}],
-      "11": [{"name":"哈維","en":"Harvey"}],
-      "14": [{"name":"魔法師","en":"Wizard"}],
-      "17": [{"name":"文森特","en":"Vincent"}],
-      "19": [{"name":"小黑","en":"Krobus"}],
-      "20": [{"name":"伊芙琳","en":"Evelyn"}],
-      "23": [{"name":"謝恩","en":"Shane"}],
-      "26": [{"name":"道格拉斯","en":"Douglas"}]
+      "1": [
+        {
+          "name": "科罗布斯",
+          "en": "Krobus"
+        }
+      ],
+      "3": [
+        {
+          "name": "莱纳斯",
+          "en": "Linus"
+        }
+      ],
+      "7": [
+        {
+          "name": "卡洛琳",
+          "en": "Caroline"
+        }
+      ],
+      "10": [
+        {
+          "name": "塞巴斯蒂安",
+          "en": "Sebastian"
+        }
+      ],
+      "14": [
+        {
+          "name": "哈维",
+          "en": "Harvey"
+        }
+      ],
+      "17": [
+        {
+          "name": "法师",
+          "en": "Wizard"
+        }
+      ],
+      "20": [
+        {
+          "name": "艾芙琳",
+          "en": "Evelyn"
+        }
+      ],
+      "23": [
+        {
+          "name": "莉亚",
+          "en": "Leah"
+        }
+      ],
+      "26": [
+        {
+          "name": "克林特",
+          "en": "Clint"
+        }
+      ]
     }
   },
-
   "festivals": {
     "春天": {
       "13": {
-        "name": "蛋蛋節", "emoji": "🥚", "img": "Egg_Festival",
+        "name": "蛋蛋節",
+        "emoji": "🥚",
+        "img": "Egg_Festival",
         "desc": "村民們在鎮上藏了彩蛋！找到最多彩蛋的人可獲得草莓種子。活動早上9點開始，中午結束。",
         "tip": "⚡ 結束後可在皮埃爾攤位購買草莓種子，這是春天唯一取得途徑！",
-        "rewards": ["草莓種子（冠軍）","可購買草莓種子","與村民互動"]
+        "rewards": [
+          "草莓種子（冠軍）",
+          "可購買草莓種子",
+          "與村民互動"
+        ]
       },
       "24": {
-        "name": "花舞節", "emoji": "💐", "img": "Flower_Dance",
+        "name": "花舞節",
+        "emoji": "💐",
+        "img": "Flower_Dance",
         "desc": "春天最浪漫的節日！在樹林共舞。需與目標對象達4顆心才能邀請共舞。",
         "tip": "⚡ 花舞節後舞伴好感+250！提前刷好感非常值得。",
-        "rewards": ["舞伴好感+250","限定裝飾品","與村民互動"]
+        "rewards": [
+          "舞伴好感+250",
+          "限定裝飾品",
+          "與村民互動"
+        ]
       }
     },
     "夏天": {
       "11": {
-        "name": "夏威夷宴會（Luau）", "emoji": "🌺", "img": "Luau",
+        "name": "夏威夷宴會（Luau）",
+        "emoji": "🌺",
+        "img": "Luau",
         "desc": "海灘節日！在湯鍋加入食材，市長評分。加高品質食材可讓全村好感+120！",
         "tip": "⚡ 加銥星品質最愛食物（松露、金南瓜）效果最強。差食材反而扣全村好感！",
-        "rewards": ["好食材：全村+120","一般食材：+60","差食材：-50至-100"]
+        "rewards": [
+          "好食材：全村+120",
+          "一般食材：+60",
+          "差食材：-50至-100"
+        ]
       },
       "28": {
-        "name": "月光水母之舞", "emoji": "🪼", "img": "Moonlight_Jellies",
+        "name": "月光水母之舞",
+        "emoji": "🪼",
+        "img": "Moonlight_Jellies",
         "desc": "夏天最後一天！村民聚集在海邊，一起觀賞在沙灘漂浮的月光水母，是全年最美的夜晚。",
         "tip": "⚡ 和所有村民對話，快速累積好感！",
-        "rewards": ["水母燈籠","煙火表演","與村民互動"]
+        "rewards": [
+          "水母燈籠",
+          "煙火表演",
+          "與村民互動"
+        ]
       }
     },
     "秋天": {
       "16": {
-        "name": "星露谷博覽會", "emoji": "🎪", "img": "Stardew_Valley_Fair",
+        "name": "星露谷博覽會",
+        "emoji": "🎪",
+        "img": "Stardew_Valley_Fair",
         "desc": "秋天年度大型博覽會！在廣場展示農作物競賽、遊玩各種攤位小遊戲，贏得代幣換取限定物品！",
         "tip": "⚡ 帶最高品質的農作物去比賽！靠小遊戲累積代幣買「農業進化催化劑」（1000代幣）！",
-        "rewards": ["農業進化催化劑","限定傢俱","各種代幣獎勵"]
+        "rewards": [
+          "農業進化催化劑",
+          "限定傢俱",
+          "各種代幣獎勵"
+        ]
       },
       "27": {
-        "name": "精靈節", "emoji": "👻", "img": "Spirits_Eve",
+        "name": "精靈節",
+        "emoji": "👻",
+        "img": "Spirits_Eve",
         "desc": "萬聖節風格節日！村民裝扮成各種角色，穿越幽暗的迷宮，在終點有黃金南瓜等著你！",
         "tip": "⚡ 走完迷宮拿到黃金南瓜！可送給村民或在商人那邊換大錢！",
-        "rewards": ["黃金南瓜（迷宮終點）","與村民互動","糖果"]
+        "rewards": [
+          "黃金南瓜（迷宮終點）",
+          "與村民互動",
+          "糖果"
+        ]
       }
     },
     "冬天": {
       "8": {
-        "name": "冰雕節", "emoji": "⛸️", "img": "Festival_of_Ice",
+        "name": "冰雕節",
+        "emoji": "⛸️",
+        "img": "Festival_of_Ice",
         "desc": "冬天溜冰節日！在冰上滑行，與村民互動，還有釣魚比賽！",
         "tip": "⚡ 釣魚比賽第一名拿到手工竿！別忘了和所有村民說話！",
-        "rewards": ["手工釣竿（冠軍）","溜冰","與村民互動"]
+        "rewards": [
+          "手工釣竿（冠軍）",
+          "溜冰",
+          "與村民互動"
+        ]
       },
       "25": {
-        "name": "冬日星盛宴", "emoji": "⭐", "img": "Winter_Star",
+        "name": "冬日星盛宴",
+        "emoji": "⭐",
+        "img": "Winter_Star",
         "desc": "最重要的節日！和所有村民一起吃年夜飯。隨機分配互送禮物，這天送出的禮物好感加成×5倍！",
         "tip": "⚡ 送銥星品質最愛禮物效果最強（×5×1.5倍）！提前備好禮物，好感等同生日！",
-        "rewards": ["禮物好感×5倍","收到村民禮物","與全村互動"]
+        "rewards": [
+          "禮物好感×5倍",
+          "收到村民禮物",
+          "與全村互動"
+        ]
       }
     }
   },
-
   "gifts": {
-    "肯特":     {"love":[["炸雞","Fried_Chicken"],["南瓜湯","Pumpkin_Soup"],["烤魚","Baked_Fish"]],"like":[["所有料理","Pizza"],["所有蔬菜","Pumpkin"]],"dislike":[["所有水果","Melon"]],"hate":[["蘑菇","Purple_Mushroom"]]},
-    "海莉":     {"love":[["椰子","Coconut"],["向日葵","Sunflower"],["粉紅蛋糕","Pink_Cake"]],"like":[["所有花卉","Sunflower"]],"dislike":[["所有蔬菜","Leek"],["所有礦石","Amethyst"]],"hate":[["野菜沙拉","Salad"],["魚料理","Catfish"]]},
-    "阿比蓋爾": {"love":[["紫水晶","Amethyst"],["巧克力蛋糕","Chocolate_Cake"],["南瓜","Pumpkin"],["辣椒","Hot_Pepper"]],"like":[["所有礦石","Amethyst"],["所有雞蛋","Egg"]],"dislike":[["所有水果","Melon"]],"hate":[["黏土","Cloth"]]},
-    "皮埃爾":   {"love":[["炸雞","Fried_Chicken"],["金南瓜","Pumpkin"]],"like":[["所有蔬菜","Leek"],["所有水果","Melon"]],"dislike":[["所有魚類","Catfish"]],"hate":[["黃金棒","Gold_Bar"]]},
-    "莉亞":     {"love":[["松露","Truffle"],["山羊奶酪","Goat_Cheese"],["松露油","Truffle_Oil"]],"like":[["所有雞蛋","Egg"],["所有水果","Melon"]],"dislike":[["荷包蛋","Egg"]],"hate":[["麵包","Baked_Fish"]]},
-    "羅賓":     {"love":[["山羊奶酪","Goat_Cheese"],["桃子","Peach"]],"like":[["所有雞蛋","Egg"],["所有水果","Peach"]],"dislike":[["所有礦石","Amethyst"]],"hate":[["鑽石","Diamond"]]},
-    "甘斯":     {"love":[["鑽石","Diamond"],["魚子醬","Caviar"],["章魚","Octopus"],["南瓜湯","Pumpkin_Soup"]],"like":[["所有料理","Pizza"],["所有蔬菜","Pumpkin"]],"dislike":[["所有水果","Melon"]],"hate":[["鯰魚","Catfish"]]},
-    "卡洛琳":   {"love":[["魚子醬","Caviar"],["金南瓜","Pumpkin"]],"like":[["所有料理","Pizza"],["茶葉","Tea_Leaves"]],"dislike":[["所有魚類","Catfish"]],"hate":[["大蒜","Leek"]]},
-    "小精靈":   {"love":[["鐵棒","Iron_Bar"],["銅棒","Copper_Bar"]],"like":[["所有礦石","Diamond"]],"dislike":[["所有料理","Pizza"]],"hate":[["所有蔬菜","Leek"]]},
-    "喬迪":     {"love":[["巧克力蛋糕","Chocolate_Cake"],["鑽石","Diamond"],["炸雞","Fried_Chicken"]],"like":[["所有料理","Pizza"],["所有蔬菜","Leek"]],"dislike":[["所有魚類","Catfish"]],"hate":[["蔬菜拼盤","Salad"]]},
-    "溫蒂":     {"love":[["章魚","Octopus"],["鑽石","Diamond"],["鯰魚","Catfish"],["鱸魚","Largemouth_Bass"]],"like":[["所有魚類","Catfish"]],"dislike":[["所有水果","Melon"],["所有蔬菜","Leek"]],"hate":[["南瓜","Pumpkin"]]},
-    "萊歐":     {"love":[["芒果","Mango"],["鳳梨","Pineapple"],["榴槤","Durian"]],"like":[["所有水果","Mango"]],"dislike":[["所有蔬菜","Leek"]],"hate":[["啤酒花","Honey"]]},
-    "艾利奧特": {"love":[["魚子醬","Caviar"],["鴨羽毛","Duck_Feather"],["榴槤","Durian"],["龍蝦","Lobster"]],"like":[["所有水果","Melon"]],"dislike":[["所有蔬菜","Leek"]],"hate":[["蟹肉","Catfish"]]},
-    "山迪":     {"love":[["鑽石","Diamond"],["仙人掌果實","Cactus_Fruit"],["巧克力蛋糕","Chocolate_Cake"]],"like":[["所有花卉","Sunflower"]],"dislike":[["所有蔬菜","Leek"]],"hate":[["大蒜","Leek"]]},
-    "艾米麗":   {"love":[["布料","Cloth"],["翡翠","Jade"],["鑽石","Diamond"]],"like":[["所有寶石","Ruby"],["羊毛","Cloth"]],"dislike":[["所有料理","Pizza"]],"hate":[["雞蛋","Egg"]]},
-    "皮帕":     {"love":[["啤酒","Beer"],["炸薯條","French_Fries"],["蜂蜜","Honey"]],"like":[["所有料理","Pizza"]],"dislike":[["所有蔬菜","Leek"]],"hate":[["所有礦石","Amethyst"]]},
-    "瑪魯":     {"love":[["電池","Battery_Pack"],["鑽石","Diamond"],["黃金棒","Gold_Bar"],["草莓","Strawberry"]],"like":[["所有礦石","Diamond"],["所有花卉","Sunflower"]],"dislike":[["所有蔬菜","Leek"]],"hate":[["所有料理","Pizza"]]},
-    "路易斯":   {"love":[["熱辣椒","Hot_Pepper"],["金南瓜","Pumpkin"],["巧克力蛋糕","Chocolate_Cake"]],"like":[["所有蔬菜","Leek"]],"dislike":[["所有魚類","Catfish"]],"hate":[["所有花卉","Sunflower"]]},
-    "賽巴斯汀": {"love":[["冰凍淚珠","Frozen_Tear"],["南瓜","Pumpkin"]],"like":[["所有雞蛋","Egg"]],"dislike":[["所有水果","Melon"],["所有蔬菜","Leek"]],"hate":[["所有花卉","Sunflower"]]},
-    "山姆":     {"love":[["楓糖漿","Maple_Syrup"],["披薩","Pizza"],["炸薯條","French_Fries"]],"like":[["所有雞蛋","Egg"]],"dislike":[["所有水果","Melon"],["所有蔬菜","Leek"]],"hate":[["所有魚類","Catfish"]]},
-    "瑪妮":     {"love":[["鑽石","Diamond"],["巧克力蛋糕","Chocolate_Cake"]],"like":[["所有雞蛋","Egg"],["所有花卉","Sunflower"]],"dislike":[["所有魚類","Catfish"]],"hate":[["所有礦石","Amethyst"]]},
-    "亞歷克斯": {"love":[["完整早餐","Complete_Breakfast"],["雞蛋","Egg"]],"like":[["所有料理","Pizza"]],"dislike":[["所有蔬菜","Leek"]],"hate":[["所有花卉","Sunflower"]]},
-    "喬治":     {"love":[["韭蔥","Leek"],["炸薯條","French_Fries"],["鰻魚","Eel"]],"like":[["所有蔬菜","Leek"]],"dislike":[["所有水果","Melon"]],"hate":[["所有花卉","Sunflower"]]},
-    "賈斯":     {"love":[["古代果實","Ancient_Fruit"],["仙女玫瑰","Fairy_Rose"]],"like":[["所有花卉","Fairy_Rose"]],"dislike":[["所有魚類","Catfish"]],"hate":[["所有蔬菜","Leek"]]},
-    "潘妮":     {"love":[["鑽石","Diamond"],["西瓜","Melon"],["南瓜","Pumpkin"],["紅薯","Yam"]],"like":[["所有料理","Pizza"],["所有蔬菜","Pumpkin"]],"dislike":[["所有魚類","Catfish"]],"hate":[["所有花卉","Sunflower"]]},
-    "克林特":   {"love":[["黃金棒","Gold_Bar"],["銥棒","Iridium_Bar"],["紅寶石","Ruby"]],"like":[["所有礦石","Diamond"]],"dislike":[["所有蔬菜","Leek"],["所有水果","Melon"]],"hate":[["所有花卉","Sunflower"]]},
-    "哈維":     {"love":[["咖啡","Coffee"],["醃黃瓜","Pickles"]],"like":[["所有蔬菜","Leek"]],"dislike":[["所有水果","Melon"],["麵包","Baked_Fish"]],"hate":[["珊瑚","Cactus_Fruit"],["鸚鵡螺","Lobster"]]},
-    "魔法師":   {"love":[["紫色蘑菇","Purple_Mushroom"],["虛空精華","Void_Essence"],["太陽魚","Sunfish"],["超級黃瓜","Super_Cucumber"]],"like":[["所有礦石","Diamond"]],"dislike":[["所有料理","Pizza"]],"hate":[["所有蔬菜","Leek"]]},
-    "文森特":   {"love":[["蝸牛","Snail"],["南瓜","Pumpkin"],["葡萄","Grape"]],"like":[["所有雞蛋","Egg"]],"dislike":[["所有蔬菜","Leek"]],"hate":[["三倍濃縮咖啡","Coffee"]]},
-    "小黑":     {"love":[["南瓜","Pumpkin"],["虛空蛋","Void_Egg"]],"like":[["所有礦石","Diamond"]],"dislike":[["所有料理","Pizza"]],"hate":[["所有水果","Melon"]]},
-    "伊芙琳":   {"love":[["巧克力蛋糕","Chocolate_Cake"],["鑽石","Diamond"],["仙女玫瑰","Fairy_Rose"],["椰子","Coconut"]],"like":[["所有花卉","Fairy_Rose"]],"dislike":[["所有魚類","Catfish"]],"hate":[["所有蔬菜","Leek"]]},
-    "謝恩":     {"love":[["辣椒","Hot_Pepper"],["披薩","Pizza"],["雞蛋","Egg"],["啤酒","Beer"]],"like":[["所有雞蛋","Egg"]],"dislike":[["所有水果","Melon"],["所有蔬菜","Leek"]],"hate":[["所有花卉","Sunflower"]]},
-    "道格拉斯": {"love":[["鑽石","Diamond"],["金南瓜","Pumpkin"]],"like":[["所有蔬菜","Leek"]],"dislike":[["所有魚類","Catfish"]],"hate":[["所有花卉","Sunflower"]]}
+    "肯特": {
+      "love": [
+        [
+          "蕨菜燉飯",
+          "Fiddlehead_Risotto"
+        ],
+        [
+          "烤榛果",
+          "Roasted_Hazelnuts"
+        ]
+      ],
+      "like": [
+        [
+          "所有蛋類",
+          "Egg"
+        ],
+        [
+          "桃子",
+          "Peach"
+        ]
+      ],
+      "dislike": [
+        [
+          "石英",
+          "Diamond"
+        ],
+        [
+          "椰林飄香",
+          "Piña_Colada"
+        ]
+      ],
+      "hate": [
+        [
+          "海藻湯",
+          "Truffle_Oil"
+        ],
+        [
+          "生魚片",
+          "Catfish"
+        ],
+        [
+          "墨西哥薄餅",
+          "Tortilla"
+        ]
+      ]
+    },
+    "海莉": {
+      "love": [
+        [
+          "椰子",
+          "Coconut"
+        ],
+        [
+          "水果沙拉",
+          "Fruit_Salad"
+        ],
+        [
+          "粉紅蛋糕",
+          "Pink_Cake"
+        ],
+        [
+          "向日葵",
+          "Sunflower"
+        ]
+      ],
+      "like": [
+        [
+          "所有水果（除椰子）",
+          "Strawberry"
+        ],
+        [
+          "黃水仙",
+          "Daffodil"
+        ]
+      ],
+      "dislike": [
+        [
+          "所有蔬菜",
+          "Pumpkin"
+        ],
+        [
+          "所有蛋類",
+          "Egg"
+        ]
+      ],
+      "hate": []
+    },
+    "阿比盖尔": {
+      "love": [
+        [
+          "紫水晶",
+          "Amethyst"
+        ],
+        [
+          "香蕉布丁",
+          "Pancakes"
+        ],
+        [
+          "黑莓脆皮餅",
+          "Blackberry_Cobbler"
+        ],
+        [
+          "巧克力蛋糕",
+          "Chocolate_Cake"
+        ],
+        [
+          "河豚",
+          "Pufferfish"
+        ],
+        [
+          "南瓜",
+          "Pumpkin"
+        ],
+        [
+          "香辣鰵魚",
+          "Spicy_Eel"
+        ],
+        [
+          "怪物圖鑑",
+          "Monster_Compendium"
+        ]
+      ],
+      "like": [
+        [
+          "石英",
+          "Amethyst"
+        ],
+        [
+          "古物",
+          "Ancient_Doll"
+        ]
+      ],
+      "dislike": [
+        [
+          "所有蛋類",
+          "Egg"
+        ],
+        [
+          "所有水果",
+          "Melon"
+        ],
+        [
+          "所有蔬菜",
+          "Leek"
+        ]
+      ],
+      "hate": [
+        [
+          "黏土",
+          "Cloth"
+        ],
+        [
+          "冬青樹",
+          "Crocus"
+        ]
+      ]
+    },
+    "皮埃尔": {
+      "love": [
+        [
+          "炸魷魚",
+          "Fried_Calamari"
+        ],
+        [
+          "商品目錄",
+          "Monster_Compendium"
+        ]
+      ],
+      "like": [
+        [
+          "所有蛋類",
+          "Egg"
+        ],
+        [
+          "山羊乳酪",
+          "Goat_Cheese"
+        ]
+      ],
+      "dislike": [
+        [
+          "所有礦石",
+          "Diamond"
+        ],
+        [
+          "所有寶石",
+          "Topaz"
+        ]
+      ],
+      "hate": [
+        [
+          "所有魚類",
+          "Catfish"
+        ],
+        [
+          "玉米",
+          "Beet"
+        ],
+        [
+          "大蒜",
+          "Hot_Pepper"
+        ],
+        [
+          "防風草湯",
+          "Autumns_Bounty"
+        ]
+      ]
+    },
+    "莉亚": {
+      "love": [
+        [
+          "山羊乳酪",
+          "Goat_Cheese"
+        ],
+        [
+          "虞美人籽鬆糕",
+          "Poppyseed_Muffin"
+        ],
+        [
+          "沙拉",
+          "Salad"
+        ],
+        [
+          "蔬菜什錦",
+          "Vegetable_Medley"
+        ],
+        [
+          "松露",
+          "Truffle"
+        ],
+        [
+          "蔬菜雜燴",
+          "Stir_Fry"
+        ],
+        [
+          "果酒",
+          "Wine"
+        ]
+      ],
+      "like": [
+        [
+          "浮木",
+          "Driftwood"
+        ],
+        [
+          "所有水果與蛋類",
+          "Strawberry"
+        ]
+      ],
+      "dislike": [
+        [
+          "所有寶石",
+          "Topaz"
+        ],
+        [
+          "所有可採集礦物",
+          "Geode"
+        ]
+      ],
+      "hate": [
+        [
+          "麵包類加工料理",
+          "Pancakes"
+        ],
+        [
+          "松露油",
+          "Truffle_Oil"
+        ]
+      ]
+    },
+    "罗宾": {
+      "love": [
+        [
+          "山羊乳酪",
+          "Goat_Cheese"
+        ],
+        [
+          "桃子",
+          "Peach"
+        ],
+        [
+          "義大利麵",
+          "Spaghetti"
+        ]
+      ],
+      "like": [
+        [
+          "木材相關雜誌",
+          "Dwarf_Gadget"
+        ],
+        [
+          "石英",
+          "Amethyst"
+        ]
+      ],
+      "dislike": [
+        [
+          "野山葵",
+          "Wild_Horseradish"
+        ]
+      ],
+      "hate": []
+    },
+    "格斯": {
+      "love": [
+        [
+          "鑽石",
+          "Diamond"
+        ],
+        [
+          "法式田螺",
+          "Escargot"
+        ],
+        [
+          "魚肉卷",
+          "Fish_Taco"
+        ],
+        [
+          "橙子",
+          "Orange"
+        ],
+        [
+          "熱帶咖哩",
+          "Tropical_Curry"
+        ]
+      ],
+      "like": [
+        [
+          "黃水仙",
+          "Daffodil"
+        ],
+        [
+          "松露",
+          "Truffle"
+        ]
+      ],
+      "dislike": [
+        [
+          "野山葵",
+          "Wild_Horseradish"
+        ]
+      ],
+      "hate": [
+        [
+          "涼拌菜絲",
+          "Stir_Fry"
+        ],
+        [
+          "冬青樹",
+          "Crocus"
+        ],
+        [
+          "石英",
+          "Amethyst"
+        ]
+      ]
+    },
+    "卡洛琳": {
+      "love": [
+        [
+          "魚肉卷",
+          "Fish_Taco"
+        ],
+        [
+          "綠茶",
+          "Green_Tea"
+        ],
+        [
+          "夏日仙女花",
+          "Sunflower"
+        ],
+        [
+          "熱帶咖哩",
+          "Tropical_Curry"
+        ]
+      ],
+      "like": [
+        [
+          "黃水仙",
+          "Daffodil"
+        ],
+        [
+          "野山葵",
+          "Wild_Horseradish"
+        ]
+      ],
+      "dislike": [
+        [
+          "莧菜",
+          "Eggplant_Parmesan"
+        ],
+        [
+          "普通蘑菇",
+          "Purple_Mushroom"
+        ]
+      ],
+      "hate": []
+    },
+    "矮人": {
+      "love": [
+        [
+          "紫水晶",
+          "Amethyst"
+        ],
+        [
+          "海藍寶石",
+          "Aquamarine"
+        ],
+        [
+          "綠寶石",
+          "Emerald"
+        ],
+        [
+          "翡翠",
+          "Jade"
+        ],
+        [
+          "萬象晶球",
+          "Omni_Geode"
+        ],
+        [
+          "紅寶石",
+          "Ruby"
+        ],
+        [
+          "黃玉",
+          "Topaz"
+        ],
+        [
+          "檬石",
+          "Lemon_Stone"
+        ]
+      ],
+      "like": [
+        [
+          "所有古物",
+          "Ancient_Doll"
+        ],
+        [
+          "石英",
+          "Amethyst"
+        ]
+      ],
+      "dislike": [
+        [
+          "野山葵",
+          "Wild_Horseradish"
+        ]
+      ],
+      "hate": [
+        [
+          "所有蛋類",
+          "Egg"
+        ]
+      ]
+    },
+    "乔迪": {
+      "love": [
+        [
+          "巧克力蛋糕",
+          "Chocolate_Cake"
+        ],
+        [
+          "香酥鱸魚",
+          "Crispy_Bass"
+        ],
+        [
+          "鑽石",
+          "Diamond"
+        ],
+        [
+          "帕爾瑪乾酪茄子",
+          "Eggplant_Parmesan"
+        ],
+        [
+          "炒鰵魚",
+          "Fried_Eel"
+        ],
+        [
+          "薄煎餅",
+          "Pancakes"
+        ],
+        [
+          "大黃派",
+          "Rhubarb_Pie"
+        ],
+        [
+          "蔬菜雜燴",
+          "Vegetable_Medley"
+        ]
+      ],
+      "like": [
+        [
+          "所有蛋類",
+          "Egg"
+        ],
+        [
+          "桃子",
+          "Peach"
+        ]
+      ],
+      "dislike": [
+        [
+          "紫蘑菇",
+          "Purple_Mushroom"
+        ],
+        [
+          "番紅花",
+          "Crocus"
+        ]
+      ],
+      "hate": []
+    },
+    "威利": {
+      "love": [
+        [
+          "鯰魚",
+          "Catfish"
+        ],
+        [
+          "鑽石",
+          "Diamond"
+        ],
+        [
+          "金錠",
+          "Gold_Bar"
+        ],
+        [
+          "銥錠",
+          "Iridium_Bar"
+        ],
+        [
+          "蜜蜂酒",
+          "Mead"
+        ],
+        [
+          "章魚",
+          "Octopus"
+        ],
+        [
+          "南瓜",
+          "Pumpkin"
+        ],
+        [
+          "海參",
+          "Sea_Cucumber"
+        ],
+        [
+          "鱘魚",
+          "Sturgeon"
+        ]
+      ],
+      "like": [
+        [
+          "魚餌與浮漂",
+          "Dwarf_Gadget"
+        ],
+        [
+          "咖啡",
+          "Coffee"
+        ]
+      ],
+      "dislike": [
+        [
+          "石英",
+          "Amethyst"
+        ],
+        [
+          "生命藥水",
+          "Truffle_Oil"
+        ]
+      ],
+      "hate": []
+    },
+    "雷欧": {
+      "love": [
+        [
+          "鴨毛",
+          "Duck_Feather"
+        ],
+        [
+          "芒果",
+          "Mango"
+        ],
+        [
+          "鴕鳥蛋",
+          "Ostrich_Egg"
+        ],
+        [
+          "鸚鵡蛋",
+          "Void_Egg"
+        ],
+        [
+          "夏威夷芋泥",
+          "Poi"
+        ]
+      ],
+      "like": [
+        [
+          "龍牙果",
+          "Cactus_Fruit"
+        ],
+        [
+          "所有礦石",
+          "Diamond"
+        ]
+      ],
+      "dislike": [
+        [
+          "多數料理",
+          "Pickles"
+        ]
+      ],
+      "hate": [
+        [
+          "啤酒",
+          "Beer"
+        ]
+      ]
+    },
+    "艾利欧特": {
+      "love": [
+        [
+          "蟹黃糕",
+          "Crab_Cakes"
+        ],
+        [
+          "鴨毛",
+          "Duck_Feather"
+        ],
+        [
+          "龍蝦",
+          "Lobster"
+        ],
+        [
+          "石榴",
+          "Pomegranate"
+        ],
+        [
+          "魷魚墨汁",
+          "Squid_Ink"
+        ],
+        [
+          "椰汁湯",
+          "Tom_Kha_Soup"
+        ]
+      ],
+      "like": [
+        [
+          "所有書籍",
+          "Monster_Compendium"
+        ],
+        [
+          "所有水果",
+          "Strawberry"
+        ]
+      ],
+      "dislike": [
+        [
+          "所有奶類",
+          "Truffle_Oil"
+        ],
+        [
+          "普通蘑菇",
+          "Purple_Mushroom"
+        ]
+      ],
+      "hate": [
+        [
+          "海參",
+          "Sea_Cucumber"
+        ],
+        [
+          "茄子",
+          "Eggplant_Parmesan"
+        ]
+      ]
+    },
+    "桑迪": {
+      "love": [
+        [
+          "番紅花",
+          "Crocus"
+        ],
+        [
+          "黃水仙",
+          "Daffodil"
+        ],
+        [
+          "芒果糯米飯",
+          "Mango_Sticky_Rice"
+        ],
+        [
+          "甜豌豆",
+          "Fairy_Rose"
+        ]
+      ],
+      "like": [
+        [
+          "所有水果",
+          "Peach"
+        ],
+        [
+          "山羊乳酪",
+          "Goat_Cheese"
+        ]
+      ],
+      "dislike": [
+        [
+          "河豚",
+          "Pufferfish"
+        ]
+      ],
+      "hate": [
+        [
+          "冬青樹",
+          "Crocus"
+        ]
+      ]
+    },
+    "艾米丽": {
+      "love": [
+        [
+          "紫水晶",
+          "Amethyst"
+        ],
+        [
+          "海藍寶石",
+          "Aquamarine"
+        ],
+        [
+          "布料",
+          "Cloth"
+        ],
+        [
+          "綠寶石",
+          "Emerald"
+        ],
+        [
+          "翡翠",
+          "Jade"
+        ],
+        [
+          "紅寶石",
+          "Ruby"
+        ],
+        [
+          "生存漢堡",
+          "Survival_Burger"
+        ],
+        [
+          "黃玉",
+          "Topaz"
+        ],
+        [
+          "羊毛",
+          "Wool"
+        ]
+      ],
+      "like": [
+        [
+          "紫蘑菇",
+          "Purple_Mushroom"
+        ],
+        [
+          "銅錠",
+          "Gold_Bar"
+        ]
+      ],
+      "dislike": [
+        [
+          "野山葵",
+          "Wild_Horseradish"
+        ],
+        [
+          "冰淇淋",
+          "Ice_Cream"
+        ]
+      ],
+      "hate": []
+    },
+    "潘姆": {
+      "love": [
+        [
+          "啤酒",
+          "Beer"
+        ],
+        [
+          "仙人掌果子",
+          "Cactus_Fruit"
+        ],
+        [
+          "琉璃山藥",
+          "Glazed_Yams"
+        ],
+        [
+          "蜜蜂酒",
+          "Mead"
+        ],
+        [
+          "淡啤酒",
+          "Pale_Ale"
+        ],
+        [
+          "防風草",
+          "Roots_Platter"
+        ],
+        [
+          "椰林飄香",
+          "Piña_Colada"
+        ]
+      ],
+      "like": [
+        [
+          "所有水果",
+          "Orange"
+        ],
+        [
+          "所有奶類",
+          "Goat_Cheese"
+        ]
+      ],
+      "dislike": [
+        [
+          "所有蛋類",
+          "Egg"
+        ],
+        [
+          "石英",
+          "Amethyst"
+        ]
+      ],
+      "hate": [
+        [
+          "冬青樹",
+          "Crocus"
+        ],
+        [
+          "章魚",
+          "Octopus"
+        ],
+        [
+          "魷魚墨汁",
+          "Squid_Ink"
+        ]
+      ]
+    },
+    "玛鲁": {
+      "love": [
+        [
+          "電池組",
+          "Battery_Pack"
+        ],
+        [
+          "花椰菜",
+          "Cauliflower"
+        ],
+        [
+          "乳酪花椰菜",
+          "Cauliflower"
+        ],
+        [
+          "鑽石",
+          "Diamond"
+        ],
+        [
+          "矮人小工具",
+          "Dwarf_Gadget"
+        ],
+        [
+          "金錠",
+          "Gold_Bar"
+        ],
+        [
+          "銥錠",
+          "Iridium_Bar"
+        ],
+        [
+          "礦工特供",
+          "Miners_Treat"
+        ],
+        [
+          "爆炒青椒",
+          "Pepper_Poppers"
+        ],
+        [
+          "放射性礦錠",
+          "Radioactive_Bar"
+        ],
+        [
+          "大黃派",
+          "Rhubarb_Pie"
+        ],
+        [
+          "草莓",
+          "Strawberry"
+        ]
+      ],
+      "like": [
+        [
+          "紫蘑菇",
+          "Purple_Mushroom"
+        ],
+        [
+          "銅錠",
+          "Gold_Bar"
+        ]
+      ],
+      "dislike": [
+        [
+          "楓糖漿",
+          "Maple_Bar"
+        ],
+        [
+          "黑莓",
+          "Blackberry_Cobbler"
+        ]
+      ],
+      "hate": []
+    },
+    "刘易斯": {
+      "love": [
+        [
+          "秋日饗宴",
+          "Autumns_Bounty"
+        ],
+        [
+          "琉璃山藥",
+          "Glazed_Yams"
+        ],
+        [
+          "綠茶",
+          "Green_Tea"
+        ],
+        [
+          "辣椒",
+          "Hot_Pepper"
+        ],
+        [
+          "蔬菜雜燴",
+          "Vegetable_Medley"
+        ]
+      ],
+      "like": [
+        [
+          "藍莓塔",
+          "Blueberry_Tart"
+        ],
+        [
+          "仙人掌果子",
+          "Cactus_Fruit"
+        ],
+        [
+          "椰子",
+          "Coconut"
+        ]
+      ],
+      "dislike": [
+        [
+          "所有奶類",
+          "Goat_Cheese"
+        ],
+        [
+          "野山葵",
+          "Wild_Horseradish"
+        ]
+      ],
+      "hate": [
+        [
+          "冬青樹",
+          "Crocus"
+        ],
+        [
+          "石英",
+          "Amethyst"
+        ]
+      ]
+    },
+    "塞巴斯蒂安": {
+      "love": [
+        [
+          "凍淚石",
+          "Lemon_Stone"
+        ],
+        [
+          "黑曜石",
+          "Amethyst"
+        ],
+        [
+          "秋日饗宴",
+          "Autumns_Bounty"
+        ],
+        [
+          "生魚片",
+          "Catfish"
+        ],
+        [
+          "虛空蛋",
+          "Void_Egg"
+        ],
+        [
+          "根菜拼盤",
+          "Roots_Platter"
+        ]
+      ],
+      "like": [
+        [
+          "鯰魚",
+          "Catfish"
+        ],
+        [
+          "怪物圖鑑",
+          "Monster_Compendium"
+        ]
+      ],
+      "dislike": [
+        [
+          "所有花卉",
+          "Poppy"
+        ],
+        [
+          "所有蔬菜",
+          "Leek"
+        ]
+      ],
+      "hate": [
+        [
+          "椰林飄香",
+          "Piña_Colada"
+        ],
+        [
+          "所有蛋類",
+          "Egg"
+        ]
+      ]
+    },
+    "山姆": {
+      "love": [
+        [
+          "仙人掌果子",
+          "Cactus_Fruit"
+        ],
+        [
+          "楓糖棒",
+          "Maple_Bar"
+        ],
+        [
+          "披薩",
+          "Pizza"
+        ],
+        [
+          "虎眼石",
+          "Tigerseye"
+        ]
+      ],
+      "like": [
+        [
+          "薑汁汽水",
+          "Ginger_Ale"
+        ],
+        [
+          "所有水果",
+          "Strawberry"
+        ]
+      ],
+      "dislike": [
+        [
+          "所有蔬菜",
+          "Leek"
+        ],
+        [
+          "所有礦石",
+          "Diamond"
+        ]
+      ],
+      "hate": []
+    },
+    "玛妮": {
+      "love": [
+        [
+          "鑽石",
+          "Diamond"
+        ],
+        [
+          "農夫午餐",
+          "Complete_Breakfast"
+        ],
+        [
+          "粉紅蛋糕",
+          "Pink_Cake"
+        ],
+        [
+          "南瓜派",
+          "Autumns_Bounty"
+        ]
+      ],
+      "like": [
+        [
+          "所有蛋類",
+          "Egg"
+        ],
+        [
+          "所有奶類",
+          "Goat_Cheese"
+        ]
+      ],
+      "dislike": [
+        [
+          "黏土",
+          "Cloth"
+        ],
+        [
+          "海草",
+          "Sea_Cucumber"
+        ]
+      ],
+      "hate": []
+    },
+    "亚历克斯": {
+      "love": [
+        [
+          "完美早餐",
+          "Complete_Breakfast"
+        ],
+        [
+          "鮭魚晚餐",
+          "Salmon_Dinner"
+        ],
+        [
+          "巨無霸餐",
+          "Survival_Burger"
+        ]
+      ],
+      "like": [
+        [
+          "所有蛋類",
+          "Egg"
+        ],
+        [
+          "能量飲料",
+          "Battery_Pack"
+        ]
+      ],
+      "dislike": [
+        [
+          "書籍",
+          "Dwarf_Gadget"
+        ],
+        [
+          "虛空蛋",
+          "Void_Egg"
+        ]
+      ],
+      "hate": []
+    },
+    "乔治": {
+      "love": [
+        [
+          "炒蘑菇",
+          "Fried_Mushroom"
+        ],
+        [
+          "韭蔥",
+          "Leek"
+        ]
+      ],
+      "like": [
+        [
+          "黃水仙",
+          "Daffodil"
+        ]
+      ],
+      "dislike": [
+        [
+          "美洲大樹莓",
+          "Wild_Horseradish"
+        ],
+        [
+          "野山葵",
+          "Wild_Horseradish"
+        ]
+      ],
+      "hate": [
+        [
+          "黏土",
+          "Cloth"
+        ],
+        [
+          "蒲公英",
+          "Daffodil"
+        ],
+        [
+          "冬青樹",
+          "Crocus"
+        ],
+        [
+          "石英",
+          "Amethyst"
+        ]
+      ]
+    },
+    "贾斯": {
+      "love": [
+        [
+          "仙女玫瑰",
+          "Fairy_Rose"
+        ],
+        [
+          "粉紅蛋糕",
+          "Pink_Cake"
+        ],
+        [
+          "葡萄乾布丁",
+          "Plum_Pudding"
+        ],
+        [
+          "古代玩偶",
+          "Ancient_Doll"
+        ]
+      ],
+      "like": [
+        [
+          "所有奶類",
+          "Goat_Cheese"
+        ],
+        [
+          "椰子",
+          "Coconut"
+        ]
+      ],
+      "dislike": [
+        [
+          "所有蛋類",
+          "Egg"
+        ],
+        [
+          "甜菜",
+          "Beet"
+        ]
+      ],
+      "hate": []
+    },
+    "潘妮": {
+      "love": [
+        [
+          "書",
+          "Monster_Compendium"
+        ],
+        [
+          "鑽石",
+          "Diamond"
+        ],
+        [
+          "綠寶石",
+          "Emerald"
+        ],
+        [
+          "甜瓜",
+          "Melon"
+        ],
+        [
+          "虞美人花",
+          "Poppy"
+        ],
+        [
+          "虞美人籽鬆糕",
+          "Poppyseed_Muffin"
+        ],
+        [
+          "紅之盛宴",
+          "Red_Plate"
+        ],
+        [
+          "塊根拼盤",
+          "Roots_Platter"
+        ],
+        [
+          "椰汁湯",
+          "Tom_Kha_Soup"
+        ]
+      ],
+      "like": [
+        [
+          "古物",
+          "Dwarf_Gadget"
+        ],
+        [
+          "所有奶類",
+          "Goat_Cheese"
+        ]
+      ],
+      "dislike": [
+        [
+          "啤酒",
+          "Beer"
+        ],
+        [
+          "葡萄",
+          "Wine"
+        ]
+      ],
+      "hate": []
+    },
+    "克林特": {
+      "love": [
+        [
+          "紫水晶",
+          "Amethyst"
+        ],
+        [
+          "海藍寶石",
+          "Aquamarine"
+        ],
+        [
+          "蕨菜燉飯",
+          "Fiddlehead_Risotto"
+        ],
+        [
+          "綠寶石",
+          "Emerald"
+        ],
+        [
+          "金錠",
+          "Gold_Bar"
+        ],
+        [
+          "銥錠",
+          "Iridium_Bar"
+        ],
+        [
+          "翡翠",
+          "Jade"
+        ],
+        [
+          "萬象晶球",
+          "Omni_Geode"
+        ],
+        [
+          "紅寶石",
+          "Ruby"
+        ],
+        [
+          "黃玉",
+          "Topaz"
+        ]
+      ],
+      "like": [
+        [
+          "採礦相關雜誌",
+          "Dwarf_Gadget"
+        ],
+        [
+          "銅錠",
+          "Gold_Bar"
+        ]
+      ],
+      "dislike": [
+        [
+          "石英",
+          "Amethyst"
+        ],
+        [
+          "野山葵",
+          "Wild_Horseradish"
+        ]
+      ],
+      "hate": [
+        [
+          "冬青樹",
+          "Crocus"
+        ]
+      ]
+    },
+    "哈维": {
+      "love": [
+        [
+          "咖啡",
+          "Coffee"
+        ],
+        [
+          "醃菜",
+          "Pickles"
+        ],
+        [
+          "巨無霸餐",
+          "Survival_Burger"
+        ],
+        [
+          "松露油",
+          "Truffle_Oil"
+        ],
+        [
+          "果酒",
+          "Wine"
+        ]
+      ],
+      "like": [
+        [
+          "所有水果",
+          "Strawberry"
+        ],
+        [
+          "雞油菌",
+          "Purple_Mushroom"
+        ]
+      ],
+      "dislike": [
+        [
+          "甜點類料理",
+          "Pink_Cake"
+        ],
+        [
+          "山羊乳酪",
+          "Goat_Cheese"
+        ]
+      ],
+      "hate": [
+        [
+          "珊瑚與貝殼類",
+          "Coconut"
+        ],
+        [
+          "美洲大樹莓",
+          "Strawberry"
+        ]
+      ]
+    },
+    "法师": {
+      "love": [
+        [
+          "謎之書",
+          "Monster_Compendium"
+        ],
+        [
+          "紫蘑菇",
+          "Purple_Mushroom"
+        ],
+        [
+          "太陽精華",
+          "Solar_Essence"
+        ],
+        [
+          "大海參",
+          "Super_Cucumber"
+        ],
+        [
+          "虛空精華",
+          "Void_Essence"
+        ]
+      ],
+      "like": [
+        [
+          "所有晶球礦物",
+          "Omni_Geode"
+        ],
+        [
+          "所有飾品",
+          "Rabbits_Foot"
+        ]
+      ],
+      "dislike": [
+        [
+          "所有蛋類",
+          "Egg"
+        ],
+        [
+          "所有奶類",
+          "Goat_Cheese"
+        ]
+      ],
+      "hate": [
+        [
+          "冬青樹",
+          "Crocus"
+        ]
+      ]
+    },
+    "文森特": {
+      "love": [
+        [
+          "蔓越莓糖果",
+          "Cranberry_Candy"
+        ],
+        [
+          "薑汁汽水",
+          "Ginger_Ale"
+        ],
+        [
+          "葡萄",
+          "Wine"
+        ],
+        [
+          "粉紅蛋糕",
+          "Pink_Cake"
+        ]
+      ],
+      "like": [
+        [
+          "所有奶類",
+          "Goat_Cheese"
+        ],
+        [
+          "椰子",
+          "Coconut"
+        ]
+      ],
+      "dislike": [
+        [
+          "所有蛋類",
+          "Egg"
+        ],
+        [
+          "甜菜",
+          "Beet"
+        ]
+      ],
+      "hate": [
+        [
+          "黏土",
+          "Cloth"
+        ]
+      ]
+    },
+    "科罗布斯": {
+      "love": [
+        [
+          "鑽石",
+          "Diamond"
+        ],
+        [
+          "銥錠",
+          "Iridium_Bar"
+        ],
+        [
+          "南瓜",
+          "Pumpkin"
+        ],
+        [
+          "虛空蛋",
+          "Void_Egg"
+        ],
+        [
+          "虛空蛋黃醬",
+          "Truffle_Oil"
+        ],
+        [
+          "野山葵",
+          "Wild_Horseradish"
+        ],
+        [
+          "怪物圖鑑",
+          "Monster_Compendium"
+        ]
+      ],
+      "like": [
+        [
+          "所有料理",
+          "Tom_Kha_Soup"
+        ],
+        [
+          "金錠",
+          "Gold_Bar"
+        ]
+      ],
+      "dislike": [
+        [
+          "所有蛋類",
+          "Egg"
+        ],
+        [
+          "所有奶類",
+          "Goat_Cheese"
+        ]
+      ],
+      "hate": [
+        [
+          "冬青樹",
+          "Crocus"
+        ],
+        [
+          "生命藥水",
+          "Truffle_Oil"
+        ]
+      ]
+    },
+    "艾芙琳": {
+      "love": [
+        [
+          "甜菜",
+          "Beet"
+        ],
+        [
+          "巧克力蛋糕",
+          "Chocolate_Cake"
+        ],
+        [
+          "鑽石",
+          "Diamond"
+        ],
+        [
+          "仙女玫瑰",
+          "Fairy_Rose"
+        ],
+        [
+          "椰子",
+          "Coconut"
+        ]
+      ],
+      "like": [
+        [
+          "香酥鱸魚",
+          "Crispy_Bass"
+        ],
+        [
+          "黏土",
+          "Cloth"
+        ]
+      ],
+      "dislike": [
+        [
+          "大蒜",
+          "Hot_Pepper"
+        ],
+        [
+          "生魚片",
+          "Catfish"
+        ]
+      ],
+      "hate": []
+    },
+    "谢恩": {
+      "love": [
+        [
+          "啤酒",
+          "Beer"
+        ],
+        [
+          "辣椒",
+          "Hot_Pepper"
+        ],
+        [
+          "爆炒青椒",
+          "Pepper_Poppers"
+        ],
+        [
+          "披薩",
+          "Pizza"
+        ]
+      ],
+      "like": [
+        [
+          "所有蛋類",
+          "Egg"
+        ],
+        [
+          "所有水果",
+          "Strawberry"
+        ]
+      ],
+      "dislike": [
+        [
+          "所有普遍不喜歡的禮物",
+          "Amethyst"
+        ]
+      ],
+      "hate": [
+        [
+          "醃菜",
+          "Pickles"
+        ],
+        [
+          "石英",
+          "Amethyst"
+        ]
+      ]
+    },
+    "德米特里厄斯": {
+      "love": [
+        [
+          "豆類火鍋",
+          "Bean_Hotpot"
+        ],
+        [
+          "冰淇淋",
+          "Ice_Cream"
+        ],
+        [
+          "大米布丁",
+          "Rice_Pudding"
+        ],
+        [
+          "草莓",
+          "Strawberry"
+        ]
+      ],
+      "like": [
+        [
+          "所有蛋類",
+          "Egg"
+        ],
+        [
+          "虛空蛋",
+          "Void_Egg"
+        ]
+      ],
+      "dislike": [
+        [
+          "石英",
+          "Amethyst"
+        ]
+      ],
+      "hate": [
+        [
+          "冬青樹",
+          "Crocus"
+        ]
+      ]
+    },
+    "莱纳斯": {
+      "love": [
+        [
+          "藍莓塔",
+          "Blueberry_Tart"
+        ],
+        [
+          "仙人掌果子",
+          "Cactus_Fruit"
+        ],
+        [
+          "椰子",
+          "Coconut"
+        ],
+        [
+          "海之菜餚",
+          "Dish_O_The_Sea"
+        ],
+        [
+          "山藥",
+          "Yam"
+        ]
+      ],
+      "like": [
+        [
+          "野外採集物",
+          "Wild_Horseradish"
+        ],
+        [
+          "所有水果",
+          "Peach"
+        ]
+      ],
+      "dislike": [
+        [
+          "寶箱",
+          "Geode"
+        ]
+      ],
+      "hate": [
+        [
+          "所有普遍討厭的禮物",
+          "Pumpkin"
+        ]
+      ]
+    }
   },
-
   "locations": {
-    "肯特":     ["🏠 家（廣場東北住宅區）","📅 春天第1天起才從軍中返回鎮上"],
-    "海莉":     ["🏠 家（廣場東，艾米麗同住）","☀️ 晴天下午常在沙灘拍照","🌅 上午在廣場附近散步"],
-    "阿比蓋爾": ["🏠 皮埃爾商店後方住家","⛏️ 晴天下午常在礦井路上"],
-    "皮埃爾":   ["🛒 皮埃爾雜貨店（廣場北）","🚫 每週三公休不開店"],
-    "莉亞":     ["🏚️ 森林小屋（農場往南，走橋過去）","🌿 下午常在廣場或沙灘散步"],
-    "羅賓":     ["🪵 木工坊（山區道路，瑪魯家）","🚫 每週一公休"],
-    "甘斯":     ["🍺 星星液酒吧（廣場右側）","⏰ 幾乎整天都在酒吧"],
-    "卡洛琳":   ["🛒 皮埃爾商店內（茶室在後方）","🌿 有時在廣場或屋後茶室"],
-    "小精靈":   ["⛏️ 礦井內（需先炸開東側石牆）","🔑 需購買小精靈翻譯書才能對話"],
-    "喬迪":     ["🏠 家（廣場東北，肯特家）","👨‍👩‍👦 常在家中或廣場附近"],
-    "溫蒂":     ["🎣 釣魚店（沙灘碼頭右邊）","🚫 每週三公休"],
-    "萊歐":     ["🏝️ 鸚鵡島（Ginger Island，需搭船）","🏔️ 完成任務後搬到山區樹屋"],
-    "艾利奧特": ["🏚️ 海邊小木屋（沙灘最右側）","🍺 下午至晚間常在酒吧寫作"],
-    "山迪":     ["🏜️ 沙漠 Oasis 商店（需先修好巴士）","⏰ 幾乎整天都在店內"],
-    "艾米麗":   ["🏠 家（廣場東，海莉同住）","🧵 工作日在裁縫坊（廣場東北角）"],
-    "皮帕":     ["🚌 拖車（沙漠巴士路旁）","🍺 下午至晚間常在酒吧"],
-    "瑪魯":     ["🪵 木工坊（白天與羅賓）","🏥 下午在診所協助哈維"],
-    "路易斯":   ["🏛️ 市長辦公室（廣場）","🚶 常在鎮上各處巡視"],
-    "賽巴斯汀": ["🏠 木工坊地下室（山區）","🌧️ 雨天有時出現在礦井路"],
-    "山姆":     ["🏠 家（廣場北住宅區）","🎸 廣場或家中練習吉他"],
-    "瑪妮":     ["🐄 瑪妮牧場（農場往南走）","🚫 每週一、週四公休"],
-    "亞歷克斯": ["🏠 家（廣場東北住宅區）","🏖️ 夏天常在沙灘","🏋️ 冬天在健身房"],
-    "喬治":     ["🏠 家（廣場東北，亞歷克斯家）","🪑 幾乎不外出（坐輪椅）"],
-    "賈斯":     ["🐄 瑪妮牧場（農場往南）","🏞️ 白天在廣場公園玩耍"],
-    "潘妮":     ["📚 圖書館（廣場）","🚌 家（拖車，公車站旁）","🏞️ 廣場公園帶孩子"],
-    "克林特":   ["⚒️ 鐵匠鋪（廣場東側）","🚫 每週日公休"],
-    "哈維":     ["🏥 診所（廣場旁）","🚫 每週三公休"],
-    "魔法師":   ["🏰 魔法師塔（農場西南方森林深處）","🔑 完成任務後可自由進入"],
-    "文森特":   ["🏠 家（山姆家）","🏞️ 白天在廣場公園玩耍"],
-    "小黑":     ["🚽 下水道（廣場廁所入口，需下水道鑰匙）","🌙 只在下水道，不外出"],
-    "伊芙琳":   ["🏠 家（廣場東北，喬治家）","🌸 廣場公園（常與喬治外出）"],
-    "謝恩":     ["🐄 瑪妮牧場（農場往南）","🍺 晚間常在酒吧","⚠️ 特定劇情在懸崖附近"],
-    "道格拉斯": ["🌲 魔法師塔附近的森林","📜 研究古代魔法文字"]
-  },
-
-  "heartMilestones": {
-    "阿比蓋爾": [
-      {"heart":2,"event":"進入皮埃爾雜貨店，她在玩電玩過不了關，你們一起挑戰。"},
-      {"heart":4,"event":"夜晚在鎮上墓地碰見她，她在練習劍術，爸爸跑來兩人一起逃跑。"},
-      {"heart":6,"event":"下雨天在礦井路上合奏。","reward":"食譜：巧克力蛋糕"},
-      {"heart":8,"event":"礦井深處她向你告白。","reward":"解鎖第9-10心（需送花束）"},
-      {"heart":10,"event":"浪漫結局事件。","reward":"可求婚"}
+    "肯特": [
+      "🏠 家（柳巷1號）",
+      "🪖 第一年仍在軍中服役，需等返鄉劇情",
+      "🍺 週五週六傍晚常到酒吧坐坐"
     ],
     "海莉": [
-      {"heart":2,"event":"進入她家，她在整理照片。"},
-      {"heart":4,"event":"在沙灘拍照，她需要你當模特。","reward":"食譜：粉紅蛋糕"},
-      {"heart":6,"event":"和她一起去水溝游泳。"},
-      {"heart":8,"event":"她拍了一張你的照片。","reward":"解鎖第9-10心"},
-      {"heart":10,"event":"愛情結局。","reward":"可求婚"}
+      "🏠 家（柳巷2號，與姊姊艾米麗同住）",
+      "📷 晴天常到沙灘拍照",
+      "🐄 偶爾會去瑪妮牧場"
     ],
-    "艾利奧特": [
-      {"heart":2,"event":"去他的小屋，他正在寫作遇到瓶頸。"},
-      {"heart":4,"event":"在酒吧聽他朗讀新作品。","reward":"食譜：蝦貝義大利麵"},
-      {"heart":6,"event":"他帶你去海灘看夕陽。"},
-      {"heart":8,"event":"他為你獻詩。","reward":"解鎖第9-10心"},
-      {"heart":10,"event":"浪漫海灘場景。","reward":"可求婚"}
+    "阿比盖尔": [
+      "🏠 皮埃爾雜貨店後方住家",
+      "⛏️ 晴天午後常在深山湖邊吹笛子",
+      "🌙 10心後雨天可能在礦井20層遇到她"
     ],
-    "哈維": [
-      {"heart":2,"event":"在診所聊他對飛行的夢想。"},
-      {"heart":4,"event":"他邀你看模型飛機收藏。","reward":"食譜：炒蛋"},
-      {"heart":6,"event":"乘坐熱氣球的浪漫場景。"},
-      {"heart":8,"event":"他向你坦白深藏的情感。","reward":"解鎖第9-10心"},
-      {"heart":10,"event":"告白事件。","reward":"可求婚"}
+    "皮埃尔": [
+      "🛒 皮埃爾雜貨店（廣場北），09:00–17:00營業",
+      "🚫 社區中心修復前每週三公休",
+      "🍺 週五打烊後偶爾去酒吧小酌"
     ],
-    "賽巴斯汀": [
-      {"heart":2,"event":"在他的房間，他玩著電玩表現冷淡。"},
-      {"heart":4,"event":"帶他去礦井探險，他難得開心。","reward":"食譜：炸薯條"},
-      {"heart":6,"event":"在湖邊夜騎摩托車。"},
-      {"heart":8,"event":"他帶你去秘密基地，打開心扉。","reward":"解鎖第9-10心"},
-      {"heart":10,"event":"告白事件。","reward":"可求婚"}
+    "莉亚": [
+      "🏚️ 鎮外森林小木屋",
+      "🔒 春夏秋需2心好感才能入內，冬天不限",
+      "🪵 平日早晨常在家中雕刻木雕"
     ],
-    "山姆": [
-      {"heart":2,"event":"他在練滑板，你們聊音樂。"},
-      {"heart":4,"event":"去他房間，他組了樂隊想巡演。","reward":"食譜：披薩"},
-      {"heart":6,"event":"他邀你去沙灘玩。"},
-      {"heart":8,"event":"在他演出後的感動時刻。","reward":"解鎖第9-10心"},
-      {"heart":10,"event":"告白事件。","reward":"可求婚"}
+    "罗宾": [
+      "🪵 木匠鋪兼住家（深山入口）",
+      "🔨 平日09:00–17:00營業，週二健身公休",
+      "💃 週五16:00提早收店與丈夫跳舞"
     ],
-    "謝恩": [
-      {"heart":2,"event":"在倉庫發現他獨自喝酒，情緒低落。"},
-      {"heart":4,"event":"他帶你去看農場的雞。","reward":"食譜：辣椒醬"},
-      {"heart":6,"event":"在懸崖邊的沉重場景，他說出心裡話。"},
-      {"heart":8,"event":"他開始振作，有了新的目標。","reward":"解鎖第9-10心"},
-      {"heart":10,"event":"告白事件。","reward":"可求婚"}
-    ],
-    "潘妮": [
-      {"heart":2,"event":"在圖書館看到她教孩子讀書。"},
-      {"heart":4,"event":"陪她去購物，她擔心媽媽。","reward":"食譜：紅薯"},
-      {"heart":6,"event":"在公園野餐，她說出對未來的期望。"},
-      {"heart":8,"event":"她帶你去她小時候的地方。","reward":"解鎖第9-10心"},
-      {"heart":10,"event":"告白事件。","reward":"可求婚"}
-    ],
-    "莉亞": [
-      {"heart":2,"event":"在她的小屋，她在雕刻，聊藝術夢想。"},
-      {"heart":4,"event":"去森林，她展示秘密雕刻作品。","reward":"食譜：松露油"},
-      {"heart":6,"event":"她的展覽開幕，你給她加油。"},
-      {"heart":8,"event":"她收到前男友的訊息，你支持她。","reward":"解鎖第9-10心"},
-      {"heart":10,"event":"浪漫森林場景。","reward":"可求婚"}
-    ],
-    "瑪魯": [
-      {"heart":2,"event":"在診所，她在發明機器人。"},
-      {"heart":4,"event":"去她的觀測台，一起看星星。","reward":"食譜：電池"},
-      {"heart":6,"event":"她的機器人試運行出問題，你幫她解決。"},
-      {"heart":8,"event":"她展示新發明，向你表達感謝。","reward":"解鎖第9-10心"},
-      {"heart":10,"event":"告白事件。","reward":"可求婚"}
-    ],
-    "艾米麗": [
-      {"heart":2,"event":"她在工作室做衣服，她相信布料的魔力。"},
-      {"heart":4,"event":"她帶你參觀夢境空間。","reward":"食譜：布料染色"},
-      {"heart":6,"event":"她表演肚皮舞，邀你一起。"},
-      {"heart":8,"event":"她感受到宇宙力量在你們之間。","reward":"解鎖第9-10心"},
-      {"heart":10,"event":"告白事件。","reward":"可求婚"}
-    ],
-    "羅賓": [
-      {"heart":2,"event":"聊她的木工事業。"},
-      {"heart":4,"event":"幫她找丟失的斧頭。","reward":"農場建築圖"},
-      {"heart":6,"event":"和她聊家庭的事。"},
-      {"heart":10,"event":"好友滿級。","reward":"郵件：山羊奶酪食譜"}
+    "格斯": [
+      "🍺 星之果實酒吧（廣場上），老闆兼主廚",
+      "⏰ 幾乎整天都待在酒吧裡",
+      "🏥 夏季4日固定去診所做體檢"
     ],
     "卡洛琳": [
-      {"heart":4,"event":"去她家的溫室。","reward":"食譜：蔬菜炒飯"},
-      {"heart":6,"event":"她帶你去秘密花園。","reward":"茶樹苗"},
-      {"heart":10,"event":"好友滿級。","reward":"郵件：食譜"}
+      "🏠 家在皮埃爾雜貨店樓上",
+      "🧖 私人日光房，2心後可入內參觀",
+      "🏃 週二常與喬迪、艾米麗一起健身"
     ],
-    "喬迪": [
-      {"heart":2,"event":"她聊到思念在外服役的肯特。"},
-      {"heart":4,"event":"她邀你共進晚餐。","reward":"食譜：炸雞"},
-      {"heart":10,"event":"好友滿級。","reward":"郵件：料理食譜"}
+    "矮人": [
+      "⛏️ 礦井入口東側（需炸開或鋼十字鎬敲開岩石）",
+      "📜 需集齊矮人卷軸捐給博物館才能溝通",
+      "🛍️ 店內販售炸彈、生命藥水等補給品"
     ],
-    "皮帕": [
-      {"heart":4,"event":"在酒吧遇到她，她說了關於文森特父親的事。"},
-      {"heart":6,"event":"幫她修巴士（間接觸發）。","reward":"解鎖沙漠地區"},
-      {"heart":10,"event":"好友滿級。","reward":"郵件：食譜"}
+    "乔迪": [
+      "🏠 家（柳巷1號，肯特妻子）",
+      "👶 平日忙家務，照顧文森特與賈斯",
+      "🏥 春季11、18日固定帶文森特看診"
     ],
-    "瑪妮": [
-      {"heart":4,"event":"她聊到農場的辛苦。","reward":"食譜：起司蛋糕"},
-      {"heart":10,"event":"好友滿級。","reward":"郵件：農場知識"}
+    "威利": [
+      "🎣 釣魚店（沙灘碼頭旁），09:00–17:00營業",
+      "🚫 每週三公休",
+      "🚤 打烊後常在碼頭或船上釣魚"
     ],
-    "伊芙琳": [
-      {"heart":4,"event":"她教你做餅乾。","reward":"食譜：餅乾"},
-      {"heart":6,"event":"幫她整理花圃，聊過去的故事。"},
-      {"heart":10,"event":"好友滿級。","reward":"郵件：仙女玫瑰種子"}
+    "雷欧": [
+      "🏝️ 姜島東部小屋（需10個金色核桃解鎖度假村）",
+      "🌳 好感度6心後搬到深山樹屋定居",
+      "📖 平日常去博物館看書"
     ],
-    "喬治": [
-      {"heart":4,"event":"他說希望能再次自由行動。","reward":"食譜：炸薯條"},
-      {"heart":10,"event":"好友滿級。","reward":"郵件：食譜"}
+    "艾利欧特": [
+      "🏚️ 海邊小木屋",
+      "🔒 春夏秋需2心好感才能入內，冬天不限",
+      "🍷 偶爾在星之果實酒吧小酌寫作"
     ],
-    "路易斯": [
-      {"heart":4,"event":"他讓你保守他種南瓜的秘密。"},
-      {"heart":10,"event":"好友滿級。","reward":"郵件：食譜"}
+    "桑迪": [
+      "🏜️ 沙漠綠洲商店（需先修好巴士）",
+      "⏰ 營業09:00–23:50，幾乎整天在店內",
+      "🎉 生日當天會與艾米麗外出散步"
     ],
-    "甘斯": [
-      {"heart":4,"event":"聊酒吧的故事。","reward":"食譜：南瓜湯"},
-      {"heart":10,"event":"好友滿級。","reward":"郵件：食譜"}
+    "艾米丽": [
+      "🏠 家（柳巷2號，海莉的姊姊）",
+      "🍹 每天16:00起在星之果實酒吧打工",
+      "🏝️ 偶爾會去姜島度假（體檢日除外）"
+    ],
+    "潘姆": [
+      "🚌 拖車（巴士站附近，巴士修復後常駐站）",
+      "🍺 巴士未修復時整天混在Joja超市與酒吧",
+      "🚫 體檢日、姜島節日不會去度假村"
+    ],
+    "玛鲁": [
+      "🏠 家（深山山路24號）",
+      "🔧 平日常在鐵匠鋪/實驗室幫忙",
+      "🏥 週二、週四在哈維診所當護士"
+    ],
+    "刘易斯": [
+      "🏛️ 鎮長住所（廣場上），平日固定巡視鎮上各店家",
+      "🍝 雨天午後常去星之果實酒吧",
+      "🤫 與瑪妮私下交往，常去河邊或牧場找她"
+    ],
+    "塞巴斯蒂安": [
+      "🏠 住在羅賓木匠鋪地下室（深山）",
+      "💻 白天常窩房間打電腦、寫程式",
+      "🏍️ 偶爾騎摩托車外出兜風"
+    ],
+    "山姆": [
+      "🏠 家（柳巷1號，鄰近河邊）",
+      "🛹 常在家門口玩滑板或掌機",
+      "🍺 週末傍晚到星之果實酒吧打撲克或撞球"
+    ],
+    "玛妮": [
+      "🐄 家兼牧場商店（煤礦森林東北側）",
+      "🛒 09:00–16:00營業，週一週二公休",
+      "💕 與鎮長路易斯私下交往中"
+    ],
+    "亚历克斯": [
+      "🏠 家（皮埃爾雜貨店東南方）",
+      "🏖️ 夏天早上常在海灘，午後在博物館旁賣冰淇淋",
+      "🏋️ 冬天幾乎天天到溫泉健身房鍛鍊"
+    ],
+    "乔治": [
+      "🏠 家（河間大道1號，與伊芙琳、亞歷克斯同住）",
+      "🪑 行動不便坐輪椅，幾乎整天在家看電視",
+      "🏥 每季23日固定去診所做體檢"
+    ],
+    "贾斯": [
+      "🐄 住在瑪妮的牧場，和文森特是好朋友",
+      "🌳 常在牧場西邊大樹下跳繩玩耍",
+      "🌙 瑪妮規定晚上不能太晚外出"
+    ],
+    "潘妮": [
+      "🚌 家在河邊拖車（與皮帕同住）",
+      "📚 平日常在小鎮或圖書館看書",
+      "🎓 週二三五到博物館教賈斯與文森特"
     ],
     "克林特": [
-      {"heart":4,"event":"他暗戀艾米麗，請你幫忙。"},
-      {"heart":6,"event":"他鼓起勇氣約艾米麗但失敗。"},
-      {"heart":10,"event":"好友滿級。","reward":"郵件：食譜"}
+      "⚒️ 鐵匠鋪（廣場東側），平日整天在店裡打鐵",
+      "🍺 每天傍晚固定去星之果實酒吧坐到深夜",
+      "🚫 重建社區中心後每週五公休（除非下雨）"
     ],
-    "小黑": [
-      {"heart":4,"event":"他帶你參觀下水道。"},
-      {"heart":6,"event":"他說出自己的孤獨。","reward":"食譜：空白書"},
-      {"heart":10,"event":"好友滿級。","reward":"虛空幽靈吊墜（可邀他同居）"}
+    "哈维": [
+      "🏥 哈維的診所（住在診所樓上）",
+      "🩺 每週固定為村民體檢，全天忙碌",
+      "🌧️ 雨天午後常去星之果實酒吧"
     ],
-    "魔法師": [
-      {"heart":4,"event":"他解釋魔法世界的事。"},
-      {"heart":10,"event":"好友滿級。","reward":"郵件：魔法知識"}
+    "法师": [
+      "🏰 法師塔（煤礦森林西側）",
+      "🚪 除節日外幾乎不離塔，地下室4心後可進入",
+      "🔮 解鎖女巫小屋後可由傳送陣直達塔內"
+    ],
+    "文森特": [
+      "🏠 家（柳巷1號，山姆的弟弟）",
+      "🎒 週二三五午後常和賈斯、潘妮在博物館",
+      "🏖️ 夏天放學後常待在沙灘"
+    ],
+    "科罗布斯": [
+      "🚽 下水道（廣場下方入口）",
+      "🌙 終年待在自己的商店裡不外出",
+      "🛍️ 商店全年無休，連節日也照常營業"
+    ],
+    "艾芙琳": [
+      "🏠 家在河間大道1號（與喬治同住）",
+      "🌷 平日常在家中廚房或鎮中心花園",
+      "🏥 每季第2天固定到診所體檢"
+    ],
+    "谢恩": [
+      "🐄 住在瑪妮牧場（煤礦森林）",
+      "🛒 社區中心修復前在Joja超市上班",
+      "🍺 下班後常一個人在酒吧角落喝酒"
+    ],
+    "德米特里厄斯": [
+      "🏠 家（深山山路24號，與羅賓、瑪魯、賽巴斯汀同住）",
+      "🔬 平日多在家中實驗室做筆記",
+      "🍻 週五傍晚常與羅賓在酒吧跳舞"
+    ],
+    "莱纳斯": [
+      "⛺ 深山北部帳篷（鐵路入口附近峭壁）",
+      "🚫 不會去姜島海灘度假村",
+      "🔥 平日常在帳篷外營火附近活動"
+    ]
+  },
+  "heartMilestones": {
+    "肯特": [
+      {
+        "heart": 3,
+        "event": "爆米花聲響起讓肯特想起戰爭創傷，你的回應將影響他的情緒。"
+      },
+      {
+        "heart": 3,
+        "event": "肯特寄信表達感謝，附上他從海外帶回的食譜。",
+        "reward": "食譜：香酥鱸魚"
+      },
+      {
+        "heart": 7,
+        "event": "肯特再寄一份從海外帶回的珍藏食譜給你。",
+        "reward": "食譜：巨無霸餐"
+      }
+    ],
+    "海莉": [
+      {
+        "heart": 2,
+        "event": "海莉與艾米麗為打掃和分工起爭執，你需出面協調。"
+      },
+      {
+        "heart": 4,
+        "event": "海莉打不開罐頭請你幫忙，對你的力氣印象深刻。"
+      },
+      {
+        "heart": 6,
+        "event": "海莉在沙灘上著急地遺失了奶奶留下的手鐲，你協助找回。"
+      },
+      {
+        "heart": 8,
+        "event": "海莉在牧場拍照時不慎摔下，你陪她回家，次日她寫信致謝。"
+      },
+      {
+        "heart": 10,
+        "event": "海莉在暗房裡展示她沖印的照片，氣氛轉為曖昧並接吻。"
+      }
+    ],
+    "阿比盖尔": [
+      {
+        "heart": 2,
+        "event": "進入她的房間，她正為打不過電玩遊戲苦惱，你陪她一起挑戰。"
+      },
+      {
+        "heart": 4,
+        "event": "雨天在深山遇見她吹長笛，一起在湖邊合奏竪琴。"
+      },
+      {
+        "heart": 6,
+        "event": "深夜在墓園撞見她練劍，皮埃爾趕來要她回家幫忙，兩人躲起來說話。"
+      },
+      {
+        "heart": 8,
+        "event": "她在房裡用靈板測試後表白心意，因害羞而把你推出房門。"
+      },
+      {
+        "heart": 10,
+        "event": "她準備下礦井時被蝙蝠群嚇到，你上前安撫後兩人接吻。"
+      }
+    ],
+    "皮埃尔": [
+      {
+        "heart": 3,
+        "event": "皮埃爾寄信分享一份他珍藏的私房食譜。",
+        "reward": "食譜：藍莓塔"
+      },
+      {
+        "heart": 6,
+        "event": "你發現他在臥室書架後藏東西，他請你保密以換取好感。"
+      }
+    ],
+    "莉亚": [
+      {
+        "heart": 2,
+        "event": "莉亞邊雕刻邊談人生與藝術，透露獨自靠創作維生的不易。"
+      },
+      {
+        "heart": 4,
+        "event": "莉亞與前任在電話中爆發爭執，向你傾訴追夢是否太自私。"
+      },
+      {
+        "heart": 6,
+        "event": "莉亞送你一件以你為靈感創作的木雕作品。"
+      },
+      {
+        "heart": 7,
+        "event": "在森林裡幫莉亞摘下高處的果子，她感念這份友情支持。"
+      },
+      {
+        "heart": 8,
+        "event": "她依你先前的建議辦展覽或開網店，作品終獲肯定。"
+      },
+      {
+        "heart": 10,
+        "event": "莉亞準備野餐慶祝感情進展，途中前任突然現身挑起衝突。"
+      }
+    ],
+    "罗宾": [
+      {
+        "heart": 6,
+        "event": "羅賓信任你並傳授木工心得，贈送特殊裝飾家具藍圖。",
+        "reward": "藍圖：鼓塊、長笛塊"
+      }
+    ],
+    "格斯": [
+      {
+        "heart": 3,
+        "event": "甘斯寄信分享一份酒吧私藏食譜。",
+        "reward": "食譜：鮭魚晚餐"
+      },
+      {
+        "heart": 4,
+        "event": "在酒吧聽他訴苦帳務困難，你可替他出主意。"
+      },
+      {
+        "heart": 5,
+        "event": "他把烹飪比喻成你來到小鎮的故事，並送你點唱機配方。",
+        "reward": "點唱機配方"
+      },
+      {
+        "heart": 7,
+        "event": "甘斯再寄一份私藏食譜給你。",
+        "reward": "食譜：紅莓醬"
+      }
+    ],
+    "卡洛琳": [
+      {
+        "heart": 2,
+        "event": "卡洛琳展示私人日光房並邀你品茶。",
+        "reward": "茶樹苗"
+      },
+      {
+        "heart": 6,
+        "event": "撞見卡洛琳與阿比蓋爾在廚房為教養問題爭吵。"
+      }
+    ],
+    "乔迪": [
+      {
+        "heart": 2,
+        "event": "在房間抽屜發現肯特從前線寄回的信，得知他狀態不太穩定。"
+      },
+      {
+        "heart": 3,
+        "event": "喬迪寄來她在烹飪比賽奪冠的拿手食譜。",
+        "reward": "食譜：炸魷魚"
+      },
+      {
+        "heart": 4,
+        "event": "喬迪邀你當晚帶大嘴鱸魚到家中共進晚餐。"
+      },
+      {
+        "heart": 7,
+        "event": "喬迪再次分享她奪冠的料理秘方。",
+        "reward": "食譜：冰淇淋"
+      }
+    ],
+    "威利": [
+      {
+        "heart": 3,
+        "event": "溫蒂寄來他父親傳下的海鮮料理食譜。",
+        "reward": "食譜：海鮮雜燴湯"
+      },
+      {
+        "heart": 5,
+        "event": "溫蒂再分享一份家傳的海鮮料理食譜。",
+        "reward": "食譜：法式田螺"
+      },
+      {
+        "heart": 6,
+        "event": "魚店發現滿地螃蟹，甘斯買下做成限時供應的料理。"
+      },
+      {
+        "heart": 7,
+        "event": "溫蒂再寄來一份家傳食譜。",
+        "reward": "食譜：燴魚湯"
+      },
+      {
+        "heart": 9,
+        "event": "溫蒂寄來最後一份家傳海鮮食譜。",
+        "reward": "食譜：龍蝦濃湯"
+      }
+    ],
+    "雷欧": [
+      {
+        "heart": 2,
+        "event": "在姜島海邊遇見他，他傾訴對自己歸屬感的迷惘。"
+      },
+      {
+        "heart": 3,
+        "event": "好感達3心後寄信附上食譜。",
+        "reward": "食譜：夏威夷芋泥"
+      },
+      {
+        "heart": 4,
+        "event": "姜島北部巧遇，他坦承溝通的困難並教你一些鸚鵡語。"
+      },
+      {
+        "heart": 6,
+        "event": "萊納斯邀他搬到星露谷，鸚鵡幫他在樹上搭建樹屋。"
+      },
+      {
+        "heart": 7,
+        "event": "好感達7心後再寄一份食譜。",
+        "reward": "食譜：芒果糯米飯"
+      },
+      {
+        "heart": 9,
+        "event": "深山中見他逐漸融入小鎮生活，但仍掛念姜島。"
+      }
+    ],
+    "艾利欧特": [
+      {
+        "heart": 2,
+        "event": "艾利奧特自述來小鎮追逐作家夢，詢問你喜歡的小說類型。"
+      },
+      {
+        "heart": 4,
+        "event": "在酒吧偶遇他，一起舉杯小酌，醉後跳起舞來。"
+      },
+      {
+        "heart": 6,
+        "event": "造訪小屋見他彈鋼琴，坦言對完成小說的迷茫與對田園生活的嚮往。"
+      },
+      {
+        "heart": 8,
+        "event": "受邀到博物館參加他的新書朗讀會，內容呼應你先前的喜好選擇。"
+      },
+      {
+        "heart": 10,
+        "event": "與他乘船出海首航，他坦白心意並親吻你。"
+      }
+    ],
+    "桑迪": [
+      {
+        "heart": 7,
+        "event": "好感達7心後她寄信並附上海鮮湯食譜。",
+        "reward": "食譜：海之珍味濃湯"
+      }
+    ],
+    "艾米丽": [
+      {
+        "heart": 2,
+        "event": "夢境中見艾米麗在奇幻雲端冥想吟唱。"
+      },
+      {
+        "heart": 4,
+        "event": "艾米麗救起一隻撞傷窗戶的鸚鵡並收養牠。"
+      },
+      {
+        "heart": 6,
+        "event": "艾米麗在房間為你表演她私藏已久的舞蹈。"
+      },
+      {
+        "heart": 8,
+        "event": "受邀參加鎮長家的「服裝療法」聚會，見眾人變裝。"
+      },
+      {
+        "heart": 10,
+        "event": "與艾米麗到森林露營，半夜被熊嚇得共擠一個睡袋。"
+      }
+    ],
+    "潘姆": [
+      {
+        "heart": 3,
+        "event": "皮帕寄信送來一份家傳小菜食譜。",
+        "reward": "食譜：起司花椰菜"
+      },
+      {
+        "heart": 7,
+        "event": "皮帕再寄一份老爸常做的家傳食譜。",
+        "reward": "食譜：塞料麵包"
+      },
+      {
+        "heart": 9,
+        "event": "造訪她家會看到她向船標祈禱，向你坦白戒酒的掙扎。"
+      }
+    ],
+    "玛鲁": [
+      {
+        "heart": 2,
+        "event": "在鐵匠鋪撞見德米特利烏斯透露對瑪魯的父愛。"
+      },
+      {
+        "heart": 4,
+        "event": "瑪魯在診所摔破燒杯，你決定如何幫她善後。"
+      },
+      {
+        "heart": 6,
+        "event": "深夜在深山與瑪魯一起用望遠鏡觀星。"
+      },
+      {
+        "heart": 8,
+        "event": "瑪魯展示新發明，你不慎被機器電到。"
+      },
+      {
+        "heart": 10,
+        "event": "瑪魯公開她秘密打造的機器人，並讓其自由離去。"
+      }
+    ],
+    "刘易斯": [
+      {
+        "heart": 3,
+        "event": "路易斯寄信附上他最愛的食譜，提醒你要用熟番茄。",
+        "reward": "食譜：義大利麵"
+      },
+      {
+        "heart": 6,
+        "event": "深夜撞見他與瑪妮在河邊談論該不該公開戀情，可替他們保密。"
+      },
+      {
+        "heart": 7,
+        "event": "路易斯再寄一份他珍藏的食譜給你。",
+        "reward": "食譜：帕爾瑪乾酪茄子"
+      }
+    ],
+    "塞巴斯蒂安": [
+      {
+        "heart": 2,
+        "event": "在房間遇見正在編程的他，得知他渴望搬到城市獨立生活。"
+      },
+      {
+        "heart": 4,
+        "event": "他在車庫修理摩托車，邀你未來一起騎車出遊。"
+      },
+      {
+        "heart": 6,
+        "event": "與他和山姆一起玩桌遊，依角色選擇完成劇情。"
+      },
+      {
+        "heart": 8,
+        "event": "雨天在海邊碼頭遇見他，他坦言與人相處會緊張但和你在一起例外。"
+      },
+      {
+        "heart": 10,
+        "event": "深夜被帶到深山私人秘境賞夜景，他坦白心意並擁抱你。"
+      }
+    ],
+    "山姆": [
+      {
+        "heart": 2,
+        "event": "山姆和賽巴斯汀在家中玩音樂，問你喜歡哪種音樂風格。"
+      },
+      {
+        "heart": 3,
+        "event": "山姆在沙灘看弟弟文森特玩沙，反思自己安慰謊言是否恰當。"
+      },
+      {
+        "heart": 4,
+        "event": "山姆做點心時不小心摔了蛋被媽媽責問，你需替他說明實情。"
+      },
+      {
+        "heart": 6,
+        "event": "山姆在鎮上滑板被鎮長逮到，你需替他緩頰或表態。"
+      },
+      {
+        "heart": 8,
+        "event": "受邀到車站看樂團排練表演，他感謝你先前給的音樂建議。"
+      },
+      {
+        "heart": 10,
+        "event": "山姆深夜在房間向你表白心意，趁機抱住並親吻你。"
+      }
+    ],
+    "玛妮": [
+      {
+        "heart": 6,
+        "event": "撞見瑪妮與路易斯在河邊討論該不該公開戀情。"
+      }
+    ],
+    "亚历克斯": [
+      {
+        "heart": 2,
+        "event": "在海灘和他一起玩接球，他傾訴想成為職業運動員的夢想。"
+      },
+      {
+        "heart": 4,
+        "event": "他在狗屋旁透露父親酗酒、母親早逝的童年陰影。"
+      },
+      {
+        "heart": 5,
+        "event": "他自卑沒讀過書，你的回應將影響他的自信心。"
+      },
+      {
+        "heart": 6,
+        "event": "他為自己粗魯的態度道歉，重新振作努力訓練。"
+      },
+      {
+        "heart": 8,
+        "event": "母親忌日當天，他在海灘哭泣並打開母親留下的音樂盒。"
+      },
+      {
+        "heart": 10,
+        "event": "他在酒吧包廂安排浪漫晚餐，向你表白心意。"
+      }
+    ],
+    "乔治": [
+      {
+        "heart": 3,
+        "event": "喬治寄信送你一份他用不到的食譜。",
+        "reward": "食譜：炒鱸魚"
+      },
+      {
+        "heart": 6,
+        "event": "到他家幫忙拿書架上的東西，他坦言因意外而無法走路。"
+      },
+      {
+        "heart": 7,
+        "event": "喬治再寄一份家傳食譜給你。",
+        "reward": "食譜：香辣鰵魚"
+      }
+    ],
+    "贾斯": [
+      {
+        "heart": 8,
+        "event": "與文森特一起教你清洗韭蔥的方法，使韭蔥售價永久提升。",
+        "reward": "韭蔥售價提升技術"
+      }
+    ],
+    "潘妮": [
+      {
+        "heart": 2,
+        "event": "喬治取信被拒絕幫助，潘妮幫忙反遭喬治生氣。"
+      },
+      {
+        "heart": 4,
+        "event": "潘妮邀你一起打掃家裡，被皮帕發現後引發爭吵。"
+      },
+      {
+        "heart": 6,
+        "event": "潘妮邀你試吃她新做的料理並請你評價。"
+      },
+      {
+        "heart": 8,
+        "event": "森林教學中潘妮邀你當客座講者分享農場經驗。"
+      },
+      {
+        "heart": 10,
+        "event": "潘妮約你夜晚到溫泉相見並坦白心意。"
+      }
+    ],
+    "克林特": [
+      {
+        "heart": 3,
+        "event": "在酒吧遇見他，他向你請教如何讓艾米麗對他有好感。"
+      },
+      {
+        "heart": 3,
+        "event": "克林特另外寄信送你一份食譜。",
+        "reward": "食譜：海藻湯"
+      },
+      {
+        "heart": 6,
+        "event": "撞見他躲在灌木叢偷看艾米麗，你逼他主動邀約。"
+      },
+      {
+        "heart": 7,
+        "event": "克林特再寄一份食譜給你。",
+        "reward": "食譜：豆類火鍋"
+      }
+    ],
+    "哈维": [
+      {
+        "heart": 2,
+        "event": "哈維替喬治體檢時起爭執，你需替兩人表態。"
+      },
+      {
+        "heart": 4,
+        "event": "哈維提醒你做年度體檢，過程中緊張地誤判心跳過速。"
+      },
+      {
+        "heart": 6,
+        "event": "你發現哈維偷偷參加卡洛琳家的健身班，替他保守秘密。"
+      },
+      {
+        "heart": 8,
+        "event": "哈維用無線電聯絡上飛行員，分享自己當飛行員的童年夢想。"
+      },
+      {
+        "heart": 10,
+        "event": "哈維邀你搭乘熱氣球夜遊，途中克服恐高並接吻。"
+      }
+    ],
+    "法师": [
+      {
+        "heart": 4,
+        "event": "獲準進入塔內地下室，可用幻覺神龕重新設計角色外觀。"
+      }
+    ],
+    "文森特": [
+      {
+        "heart": 8,
+        "event": "與賈斯一起教你清洗韭蔥的方法，使韭蔥售價永久提升。",
+        "reward": "韭蔥售價提升技術"
+      }
+    ],
+    "科罗布斯": [
+      {
+        "heart": 3,
+        "event": "他請法師代筆寄信，分享同族用來製作物品的筆記。",
+        "reward": "家具圖紙：深色牌子"
+      },
+      {
+        "heart": 14,
+        "event": "沙灘看月光水母時，被海怪捲上觸手開心兜風。"
+      }
+    ],
+    "艾芙琳": [
+      {
+        "heart": 4,
+        "event": "伊芙琳烤了餅乾請你試吃並分享食譜。",
+        "reward": "食譜：餅乾"
+      }
+    ],
+    "谢恩": [
+      {
+        "heart": 2,
+        "event": "謝恩在池塘邊喝著啤酒向你吐露心事，自認人生已無可救藥。"
+      },
+      {
+        "heart": 3,
+        "event": "好感提升後謝恩寄來食譜，態度也變得比較有禮貌。",
+        "reward": "食譜：爆炒青椒"
+      },
+      {
+        "heart": 4,
+        "event": "謝恩醉倒在房間，你協助潑水喚醒他，瑪妮十分擔憂他的酗酒。"
+      },
+      {
+        "heart": 6,
+        "event": "謝恩在懸崖邊情緒崩潰，你勸說後協助他並建議尋求心理治療。"
+      },
+      {
+        "heart": 7,
+        "event": "謝恩戒酒後送賈斯一份禮物並參與廣告拍攝，事後寄來新食譜。",
+        "reward": "食譜：奇怪的小麵包"
+      },
+      {
+        "heart": 8,
+        "event": "謝恩在牧場穀倉教賈斯養雞，期望未來由她延續養雞傳統。"
+      },
+      {
+        "heart": 10,
+        "event": "謝恩邀你看球賽，激動之餘吻了你並感到不好意思。"
+      }
+    ],
+    "德米特里厄斯": [
+      {
+        "heart": 3,
+        "event": "好感達3心後寄信附上食譜，感謝你支持他的研究。",
+        "reward": "食譜：炒蘑菇"
+      },
+      {
+        "heart": 6,
+        "event": "木工坊內他和羅賓爭論番茄算不算水果，你的回答影響好感度。"
+      },
+      {
+        "heart": 7,
+        "event": "好感達7心後再寄來一份食譜表達感謝。",
+        "reward": "食譜：秋日饗宴"
+      }
+    ],
+    "莱纳斯": [
+      {
+        "heart": 3,
+        "event": "好感達3心後寄信附上他最愛的魚料理食譜。",
+        "reward": "食譜：生魚片"
+      },
+      {
+        "heart": 4,
+        "event": "造訪他的營地，他道歉先前的不信任並教你製作萬能魚餌。"
+      },
+      {
+        "heart": 7,
+        "event": "好感達7心後再寄來一份魚料理食譜。",
+        "reward": "食譜：魚肉卷"
+      },
+      {
+        "heart": 8,
+        "event": "木工坊前羅賓想留他吃飯，他婉拒搬到農場同住但珍惜這份友誼。"
+      }
     ]
   }
 }
