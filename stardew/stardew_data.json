@@ -602,6 +602,10 @@
         [
           "義大利麵",
           "Spaghetti"
+        ],
+        [
+          "伐木秘事",
+          "Woodys_Secret"
         ]
       ],
       "like": [
@@ -687,8 +691,8 @@
           "Green_Tea"
         ],
         [
-          "夏日仙女花",
-          "Sunflower"
+          "夏季亮片",
+          "Summer_Spangle"
         ],
         [
           "熱帶咖哩",
@@ -750,6 +754,10 @@
         [
           "檬石",
           "Lemon_Stone"
+        ],
+        [
+          "岩漿鰵魚",
+          "Lava_Eel"
         ]
       ],
       "like": [
@@ -1076,6 +1084,10 @@
         [
           "羊毛",
           "Wool"
+        ],
+        [
+          "鸚鵡蛋",
+          "Parrot_Egg"
         ]
       ],
       "like": [
@@ -1301,27 +1313,27 @@
       "love": [
         [
           "凍淚石",
-          "Lemon_Stone"
+          "Frozen_Tear"
         ],
         [
           "黑曜石",
-          "Amethyst"
+          "Obsidian"
         ],
         [
-          "秋日饗宴",
-          "Autumns_Bounty"
+          "南瓜湯",
+          "Pumpkin_Soup"
         ],
         [
           "生魚片",
-          "Catfish"
+          "Sashimi"
         ],
         [
           "虛空蛋",
           "Void_Egg"
         ],
         [
-          "根菜拼盤",
-          "Roots_Platter"
+          "青蛙蛋",
+          "Green_Frog_Egg"
         ]
       ],
       "like": [
@@ -1537,6 +1549,18 @@
         [
           "古代玩偶",
           "Ancient_Doll"
+        ],
+        [
+          "仙女盒",
+          "Fairy_Box"
+        ],
+        [
+          "詭異玩偶（綠）",
+          "Strange_Doll"
+        ],
+        [
+          "詭異玩偶（黃）",
+          "Strange_Doll"
         ]
       ],
       "like": [
@@ -1663,6 +1687,10 @@
         [
           "黃玉",
           "Topaz"
+        ],
+        [
+          "水煮洋薊",
+          "Artichoke_Dip"
         ]
       ],
       "like": [
@@ -1813,6 +1841,14 @@
         [
           "粉紅蛋糕",
           "Pink_Cake"
+        ],
+        [
+          "青蛙蛋",
+          "Green_Frog_Egg"
+        ],
+        [
+          "蝸牛",
+          "Snail"
         ]
       ],
       "like": [
@@ -1862,7 +1898,7 @@
         ],
         [
           "虛空蛋黃醬",
-          "Truffle_Oil"
+          "Void_Mayonnaise"
         ],
         [
           "野山葵",
@@ -1871,6 +1907,10 @@
         [
           "怪物圖鑑",
           "Monster_Compendium"
+        ],
+        [
+          "怪獸香水",
+          "Monster_Musk"
         ]
       ],
       "like": [
@@ -1923,8 +1963,16 @@
           "Fairy_Rose"
         ],
         [
-          "椰子",
-          "Coconut"
+          "葡萄乾",
+          "Raisins"
+        ],
+        [
+          "填料麵包",
+          "Stuffing"
+        ],
+        [
+          "鬱金香",
+          "Tulip"
         ]
       ],
       "like": [
